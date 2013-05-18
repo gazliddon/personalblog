@@ -1,0 +1,153 @@
+!!! 5
+html(xmlns='http://www.w3.org/1999/xhtml', xml:lang='en', lang='en-us')
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    title Gaz Liddon - Ruffian Stuffian.
+    meta(name='author', content='Gaz Liddon')
+    meta(name='description', content='My day to day work blog')
+    link(href='http://feeds.feedburner.com/ChrisGranger', rel='alternate', title='Chris Granger', type='application/atom+xml')
+    //
+       syntax highlighting CSS
+    link(rel='stylesheet', href='/css/syntax.css', type='text/css')
+    link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
+    //
+       Homepage CSS
+    link(rel='stylesheet', href='/css/screen-dark.css', type='text/css', media='screen, projection')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700', rel='stylesheet', type='text/css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', type='text/javascript')
+
+  body
+    #wrapper
+      #nav
+        h1
+          a(href='/') gaz liddon
+        ul
+          li
+            a(href='/lighttable/') Light Table
+          li
+            a.trigger(href='/projects') projects
+            ul.projects
+              li
+                a(href='/projects/noir') noir
+              li
+                a(href='/projects/korma') korma
+              li
+                a(href='/projects/cljs') cljs
+              li
+                a(href='/projects/iwbyp') iwbyp
+              li
+                a(href='/projects/others') others
+          li
+            a(href='/archive') archive
+          li
+            a(href='/resume') about
+        ul.info
+          li
+            | github:
+            a(href='http://github.com/gazliddon') &nbsp gazliddon
+          li
+            | twitter:
+            a(href='http://twitter.com/gyratory') &nbsp gyratory
+          li gaz[at]ruffiangames.com
+
+         
+      #contentwrapper
+        #content
+          #post
+          article.post
+            
+            span 28 Apr 2013
+            h2
+              a(href='/2013/04/28/light-table-040/') Light Table 0.4
+            p
+              | Today, I'm proud to announce the 0.4 release of Light Table -
+              strong
+                a(href='http://www.lighttable.com/') go download it!
+            p
+              img(src='http://www.chris-granger.com/images/040/lt.png', alt='Light Table 0.4')
+            h3#toc_75 A bit of the future.
+            p
+              | With this release our goal was to bring more people into the fold, to increase the number of languages we can eval, and to smooth out some of the core experience. After 0.3, we finally had a chance to move the ball forward some - from live modifying websites directly inside of LT to injecting code into NodeJS and showing matplotlib graphs inline. This is a huge release in virtually every way and I think there's something for everyone, whether you're just starting out programming or you've been writing python since it was released. Let's take a look.
+            h3#toc_76 Next-gen web dev
+            p
+              | One of the things I originally showed in the Light Table videos was the ability to embed your work directly into Light Table itself. Well...
+            iframe(width='600', height='450', src='http://www.youtube.com/embed/gtXpOD6jFls?rel=0', frameborder='0', allowfullscreen='allowfullscreen')
+            p
+              | You can now stick a browser in a tab, navigate to any page you want and start live modifying it. The neat thing is that you don't have to own the page or do any setup. It just works. Cmd/Ctrl+R will refresh the page anytime you need to do so. Here's the obligatory meta screenshot of me writing this post in Light Table:
+            p
+              img(src='http://www.chris-granger.com/images/040/blog.png', alt='meta Light Table')
+            p
+              | The most requested language from our survey was Javascript by a fair margin and a lot of people were hoping for deeper JS integration. As soon as we started to see that, we shifted gears and made it happen. Thanks to some serious intergration with the Chrome-DevTools, we can do some pretty impressive stuff - like inspect Javascript objects inline and through the console:
+            p
+              img(src='http://www.chris-granger.com/images/040/inspector.png', alt='Inline inspectors in Light Table')
+            p
+              | But the most powerful thing to me is the level of eval we now have. Thanks to the devtools integration, we aren't just making calls to
+              code eval()
+              | , we're patching the running VM. This means that all the things that should be "impossible" to change at runtime, are a single Cmd+Enter from being updated. It magically fixes event handlers, anonymous functions, and a host of other things. No, it's not perfect, but you sure won't have to refresh much anymore.
+            p
+              img(src='http://www.chris-granger.com/images/040/cube.png', alt='JS eval Light Table')
+            p Oh and speaking of Javascript.. you can eval into a NodeJS process now too.
+            p
+              img(src='http://www.chris-granger.com/images/040/node.png', alt='NodeJS in Light Table')
+            h3#toc_77 Speaking snake: Python support
+            p
+              a(href='http://bash.org/?400459') SSssssss.
+              | Light Table now supports Python eval. It works for both Python 2 and Python 3 and utilizes IPython for a better overall experience if it's available.
+            iframe(width='600', height='338', src='http://www.youtube.com/embed/V2rOTrnqqtg?rel=0', frameborder='0', allowfullscreen='allowfullscreen')
+            p
+              | Python support comes complete with inline results/exceptions and integration with the console.
+            p
+              img(src='http://www.chris-granger.com/images/040/pyinline.png', alt='Python in Light Table')
+            p
+              | With the IPython integration we were also able to do inline matplotlib/pylab graphs, which is pretty neat:
+            p
+              img(src='http://www.chris-granger.com/images/040/ipygraphs.png', alt='IPython in Light Table')
+            h3#toc_78 Documentation
+            p
+              | There's finally a nice set of
+              a(href='http://docs.lighttable.com') documentation
+              | ! Up until this point, we've been hesitant to spend much time writing documentation on how to use Light Table, because things were still changing pretty drastically. We're happy with the general workflow we've put together now, though, and so it was time to get some content out there. You can access the docs within Light Table itself from the welcome tab or the
+              code Docs: Open Light Table's documentation
+              | command.
+            h3#toc_79 And then literally everything else
+            p
+              | As I said before, this is a huge release - just look at the
+              a(href='https://github.com/Kodowa/Light-Table-Playground/blob/master/README.md') changelog
+              | ! Basically every aspect of LT got some love, but here are some of the big ones:
+            ul
+              li You can now have multiple windows
+              li You can have multiple tabsets! (splits)
+              li
+                | The
+                code workspace
+                | tree-view now tracks the file system and lets you do the standard file operations
+              li
+                | You can explicitly create a connection through the
+                code connect
+                | tab
+              li A greatly improved console
+              li Intra-file token-based Auto-complete!
+              li Dramatic performance improvements (rendering is 4-10x faster)
+            p
+              | We fixed a lot of the little things that were missing or slightly off that took away from the overall experience of Light Table. I think you'll find this release just feels better in every way.
+            h3#toc_80 Do you teach programming?
+            p
+              | Our goal has always been to provide an environment that helps you get started, but also grows up with you to be a powerful working environment. As of this release, Light Table has a lot to offer as a platform for new programmers - from a dramatically shortened feedback loop to a clean, simple workflow. If you work with a teaching organization of some kind, we'd really love to hear how we can help get your students using Light Table. Shoot us an email at
+              a(href='mailto:learn@kodowa.com') learn@kodowa.com
+              | .
+            h3#toc_81 The plan
+            p
+              | With 0.4 we now see a taste of all three of the original languages we set out to include in Light Table. The plan is for there to be one more public release before we then move into the private beta for our Kickstarter folks. The 0.5 release will be focused on picking up a couple of things that didn't quite make it into 0.4 and deeper language support, while the beta will be all about opening Light Table up to plugins - the most exciting aspect of this whole thing. We're proud of this launch, but trust me, there's even more amazing stuff on the way.
+            h3#toc_82 Links
+            ul
+              li
+                a(href='http://www.lighttable.com/') Download it!
+              li
+                a(href='http://docs.lighttable.com') Documentation
+              li
+                a(href='https://github.com/Kodowa/Light-Table-Playground/blob/master/README.md') Change log
+              li
+                a(href='https://groups.google.com/forum/?fromgroups#!forum/light-table') Announcements List
+              li
+                a(href='https://groups.google.com/forum/?fromgroups#!forum/light-table-discussion') Discussion List
+      p#copyright © 2012 Chris Granger
