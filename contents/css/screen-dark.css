@@ -14,7 +14,6 @@ iframe { margin-bottom:20px; }
 #nav li ul { margin-top:2px; margin-bottom:2px; margin-left: 20px; display:none; }
 #nav li ul a { color: #c9cecc; } 
 
-#nav .info { color: #9e9e9e; margin-top:100px; font-size:10pt; position:absolute; bottom:100px; }
 
 #copyright { display:none; z-index: -1; position:fixed; color: #9e9e9e; bottom:50px; right:50px;}
 
@@ -132,6 +131,43 @@ ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents vi
 li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
 /* Alternate shading for lines */
 li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+#services  {
+    margin-top:100px;
+    position:absolute; bottom:75px;
+    width: 60%;
+}
+
+.bwfade img { /* Universal settings */
+    -webkit-transition:all .1s;
+    -moz-transition:all .1s;
+    -ms-transition:all .1s;
+    -o-transition:all .1s;
+    transition:all .1s;
+}
+
+.bwfade img:not(:hover) {
+    -webkit-filter:grayscale(100%);
+    -moz-filter:greyscale(100%);
+    -ms-filter:greyscale(100%);
+    -o-filter:greyscale(100%);
+    filter:grayscale(100%);
+}
+.bwfade img:hover {
+    -webkit-filter:greyscale(0%);
+    -moz-filter:greyscale(0%);
+    -ms-filter:greyscale(0%);
+    -o-filter:greyscale(0%);
+    filter:greyscale(0%);
+}
+
+#services img
+{
+    padding-right: 7px;
+    width: 28px;
+    height: 28px;
+}
+
 
 @media print {
   pre.prettyprint { background-color: none }

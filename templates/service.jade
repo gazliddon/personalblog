@@ -1,0 +1,8 @@
+mixin tags(theTags)
+  -var x = "&nbsp;"
+  if (theTags)
+    p.tags
+      each t in theTags.split(" ")
+        span.label.label-info= t
+        !{x}
+

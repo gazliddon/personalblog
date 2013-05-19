@@ -1,5 +1,4 @@
 include getarticles
-
 doctype xml
 rss(version='2.0',
     xmlns:content='http://purl.org/rss/1.0/modules/content/',
@@ -18,9 +17,10 @@ rss(version='2.0',
       - var permalink = locals.url + article.url
       item
         title= article.title
+        // Oooof! Nasty hack TODO: Clean up in aisle 7
+        author= "gaz@gazaxian.com (Gaz Liddon)"
         link= permalink
         pubDate= article.rfc822date
         guid(isPermaLink='true')= permalink
-        author= article.author
         //- passing locals.url resolves all relative urls to absolute
         description= article.getHtml(locals.url)

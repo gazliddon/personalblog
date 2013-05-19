@@ -1,36 +1,25 @@
+mixin serviceIcon(file, url )
+  - var norm =  "/images/icons/" + file + "-logo.png"
+  a(href=url).bwfade
+    img( src = norm)
+
 #nav
+  
   h1
     a(href='/') gaz liddon zeropager
 
-  ul
-    li
-      a(href='http://www.ruffiangames.com') ruffian
 
-    li
-      a(href='/archive') archive
+  #services
+    div
+      mixin serviceIcon("rss",        "/feed.xml")
+      mixin serviceIcon("facebook",   "https://www.facebook.com/gazliddon")
+      mixin serviceIcon("gplus",      "https://plus.google.com/105572989283882496222/posts")
+      mixin serviceIcon("soundcloud", "https://soundcloud.com/gyratory")
+      mixin serviceIcon("twitter",    "https://twitter.com/gyratory")
+      mixin serviceIcon("flickr",     "http://www.flickr.com/photos/gyratory")
+      mixin serviceIcon("github",     "https://github.com/gazliddon")
+      mixin serviceIcon("linkedin",   "http://www.linkedin.com/pub/gary-liddon/0/840/792")
+      mixin serviceIcon("fitocracy",  "https://www.fitocracy.com/profile/gazliddon/?feed")
+  
 
-    li
-      a(href='uk.linkedin.com/pub/gary-liddon/0/840/792') about
-
-    li
-      a(href='https://github.com/gazliddon/personalblog') website source
-
-  ul.info
-    li
-      | facebook:
-      a(href='http://www.facebook.com/gazliddon') gazliddon
-    li
-      | soundcloud:
-      a(href='http://www.soundcloud.com/gyratory') gazliddon
-    li
-      | flickr:
-      a(href='http://www.flickr.com/photos/gyratory') gazliddon
-    li
-      | github:
-      a(href='http://github.com/gazliddon') gazliddon
-    li
-      | twitter:
-      a(href='http://twitter.com/gyratory') gyratory
-    li
-      | email: gaz[at]gazaxian.com
 
