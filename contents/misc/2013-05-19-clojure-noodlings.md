@@ -6,7 +6,7 @@ tags: code clojure
 template: article.jade
 ---
 
-<div class='middel'>
+<div class='middle'>
 ![coding horror](./img/coding-header.jpg) 
 <div>
 
