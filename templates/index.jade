@@ -22,6 +22,7 @@ block content
 
 
       header
+        -var x = "&nbsp;"
         br
         span.aut= article.date.toDateString()
 
@@ -31,7 +32,7 @@ block content
           p.tags
             each t in tags.split(" ")
               span.label.label-info= t
-              nbsp
+              !{x}
 
       section.content!= article.intro
       if article.hasMore
