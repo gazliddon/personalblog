@@ -10,7 +10,7 @@ block content
   each article in articles
     article.post
       mixin articleheader(article)
-
+ 
       section.content!= article.intro
       if article.hasMore
         p.read-more

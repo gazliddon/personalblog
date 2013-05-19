@@ -1,4 +1,3 @@
-
 extends layout
 
 block prepend title
@@ -10,3 +9,8 @@ block content
   article.post
     mixin articleheader(page)
     section.content!= page.html
+
+    hr
+
+  #comments
+    include disqus

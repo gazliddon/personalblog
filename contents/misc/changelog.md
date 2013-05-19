@@ -1,6 +1,6 @@
 ---
 title: Site Updates
-date: 2013-05-19 20:19
+date: 2013-05-19 20:53
 author: gaz
 tags: blog changes 
 template: article.jade
@@ -12,7 +12,8 @@ Website changes tracked right here :)
 
 ## Changes
 
-### 2013-05-19 20:19
+### 2013-05-19 20:53
+* NEW : Added Disqus comments system. Let's see how this goes
 * NEW : tags are nice and multi-colored, resized some media and unified article headers: [commit](URL )
 * FIX : Tumblr blog links now redirect to the tumblr blog (via mod_write && vhost conf file on server)
 * NEW : Made the social media links into icons w a BW fade in / out on hover: [commit](https://github.com/gazliddon/personalblog/commit/9671caa3eb1d15428e0648a818654e35cbcda35a )

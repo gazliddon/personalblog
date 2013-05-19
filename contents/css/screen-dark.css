@@ -212,6 +212,17 @@ span.alltags
     vertical-align: top;
 }
 
+article
+{
+    padding-bottom: 2em;
+}
+
+#comments
+{
+    text-size: 80%;
+    font-weight: normal;
+}
+
 @media print {
   pre.prettyprint { background-color: none }
   pre .str, code .str { color: #060 }
