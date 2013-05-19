@@ -1,0 +1,15 @@
+mixin articleheader(article)
+  include author
+  include getarticles
+
+  mixin tags
+
+  div.header
+    div.topbit
+      span.aut= article.date.toDateString()
+      span.alltags
+        mixin tags(article.metadata.tags)
+
+    h1
+      a(href=article.url)= article.title
+

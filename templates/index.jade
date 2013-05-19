@@ -3,19 +3,13 @@ extends layout
 block content
   include author
   include getarticles
+  include articleheader
 
   mixin tags
 
   each article in articles
     article.post
- 
-      header
-        br
-        span.aut= article.date.toDateString()
-
-        h1
-          a(href=article.url)= article.title
-          mixin tags(article.metadata.tags)
+      mixin articleheader(article)
 
       section.content!= article.intro
       if article.hasMore

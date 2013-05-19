@@ -5,7 +5,7 @@ author: gaz
 tags: blog video ffmpeg tech 
 template: article.jade
 ---
-<video width="568" height="320" controls>
+<video width="600" height="338" controls>
   <source src="/articles/2015-05-18-video-conversion/charlie.mp4" type="video/mp4">
   <source src="/articles/2015-05-18-video-conversion/charlie.webm" type="video/webm">
 </video>

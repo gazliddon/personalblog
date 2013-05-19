@@ -1,8 +1,29 @@
 mixin tags(theTags)
-  -var x = "&nbsp;"
-  if (theTags)
-    p.tags
-      each t in theTags.split(" ")
-        span.label.label-info= t
-        !{x}
 
+  -  var x = "&nbsp;"
+
+  - function stringToRandomishSmallNumber(str) {
+  -   var ret = 0;
+  -   for(var i = 0; i < str.length; i++) {
+  -      ret = ret + str.charCodeAt(i);
+  -    }
+  -   return (ret);
+  - }
+
+  -  function stringToArrayElement(str, arr) {
+  -      var maxIndex = (arr.length) ;
+  -      var val = stringToRandomishSmallNumber (str);
+  -      return arr[val % maxIndex];
+  -  }
+
+  - var tags = ["success", "warning", "important", "info", "inverse" ]
+
+  - function randomColTag(str) {
+  -   var tagStr = stringToArrayElement(str, tags);
+  -   ret = "<span class='label label-" + tagStr + "'>" + str + "</span>";
+  -   return (ret);
+  -   }
+
+  if ( theTags )
+    each t in theTags.split(" ")
+      !{ randomColTag(t) }

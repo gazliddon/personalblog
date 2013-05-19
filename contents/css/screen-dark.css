@@ -50,12 +50,6 @@ iframe { margin-bottom:20px; }
     text-align: center;
 }
 
-span.aut
-{
-    font-size: 0.9em;
-    color: #9e9e9e;
-    padding-top: 3em;
-}
 
 #content .middle img
 {
@@ -70,11 +64,11 @@ span.aut
     padding-top: 1.90em;
 }
 
-#content h1 { color: rgb(186, 196, 165);  font-size:32px;  margin-bottom:0px; margin-top: 20px; }
+#content h1 { color: rgb(186, 196, 165);  font-size:32px;  margin-bottom:0px; }
 #content h2 {  color: rgb(165, 181, 196);  font-size:24px;  margin-bottom:0px; margin-top: 20px; }
 #content h2 a { color: rgb(165, 181, 196); }
 #content h3 { font-size: 24px;  }
-#content img { display:block; max-width:600px; border-radius:5px; border:none; border:1px solid #3d3e3c;}
+#content img { display:block; max-width:600px; border-radius:10px; border:none;}
 #content p {margin: 0px 0px 10px; }
 #content p a { text-decoration:none; }
 #content blockquote p { font-size:11pt; background:#d8d8d8; border-radius:5px; padding:10px; box-shadow: 0 0 8px #aaa; }
@@ -186,6 +180,37 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     height: 24px;
 }
 
+div .header
+{
+    padding-bottom: 0.2em;
+}
+
+
+div.topbit
+{
+    width: 100%;
+}
+
+span.aut
+{
+    font-size: 0.9em;
+    color: #9e9e9e;
+    vertical-align: top;
+}
+
+span.alltags
+{
+    float: right;
+}
+
+.alltags span
+{
+    font-weight: normal;
+    font-color: #c9cecc;
+    font-size: 0.75em;
+    margin-left: 3px;
+    vertical-align: top;
+}
 
 @media print {
   pre.prettyprint { background-color: none }

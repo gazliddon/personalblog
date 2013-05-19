@@ -5,15 +5,8 @@ block prepend title
   | #{ page.title } - 
 
 block content
-
-  #header
-    -var x = "&nbsp;"
-    span.aut= page.date.toDateString()
-    h1= page.title
-    br
-
-    tags = page.metadata.tags
-    mixin tags(tags)
+  include articleheader
 
   article.post
+    mixin articleheader(page)
     section.content!= page.html
