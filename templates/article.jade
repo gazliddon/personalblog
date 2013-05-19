@@ -8,6 +8,7 @@ block content
   include author
 
   #header
+    -var x = "&nbsp;"
     span.aut= page.date.toDateString()
     h1= page.title
 
@@ -16,7 +17,7 @@ block content
       p.tags
         each t in tags.split(" ")
           span.label.label-info= t
-          nbsp
+          !{x}
 
   article.post
     section.content!= page.html
