@@ -161,11 +161,29 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     filter:greyscale(0%);
 }
 
-#services img
+#services div.group
 {
-    padding-right: 7px;
-    width: 28px;
-    height: 28px;
+    padding-bottom: 0.5em;
+}
+
+#services .icons
+{
+    padding: none;
+    padding-left: 0.5em;
+}
+
+#services .text
+{
+    padding: none;
+    font-size: 0.75em;
+}
+
+#services .icons img
+{
+    padding: none;
+    margin: 4px;
+    width: 24px;
+    height: 24px;
 }
 
 
