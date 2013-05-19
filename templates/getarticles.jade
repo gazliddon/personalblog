@@ -1,0 +1,12 @@
+//- Iterate the directories in articles and return index.md or nil for each dir
+//- compact dumps the nils and then value gives me copies
+
+-  var dirs = _.chain(contents.articles._.directories).map(function(item) {
+-   return item.index
+-   }).compact().value()
+
+//- Now go and get all of the pages in articles
+- var files = contents['misc']._.pages
+
+//- get the union and sort by negative date :)
+- var articles  = _(_.union(dirs, files)).sortBy(function(item) { return -item.date })

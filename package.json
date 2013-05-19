@@ -1,0 +1,10 @@
+{
+  "name": "personalblog",
+  "version": "0.0.0",
+  "description": "workblog ======== Sources for my work blog",
+  "main": "index.js",
+  "dependencies": {
+    "wintersmith-coffee": "~0.1.2",
+    "wintersmith-sass": "~0.1.3"
+  }
+}
