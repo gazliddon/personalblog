@@ -5,4 +5,4 @@ author: gaz
 tags: running
 template: article.jade
 ---
-And it can be found [here: https://github.com/gazliddon/personalblog ](https://github.com/gazliddon/personalblog ) 
+And it can be found [here](https://github.com/gazliddon/personalblog ) 
