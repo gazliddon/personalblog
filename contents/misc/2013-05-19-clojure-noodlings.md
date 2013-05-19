@@ -6,6 +6,9 @@ tags: code clojure
 template: article.jade
 ---
 
+[clojure]: http://clojure.org/
+
+
 <div class='middle'>
 ![coding horror](./img/coding-header.jpg) 
 <div>
@@ -15,7 +18,7 @@ I wanted to write something about my beginnings on clojure which I'm finding a l
 ## Achieve More / Write Less
 The thing I've found interesting is the more work you do, the more idiomatic and elegant the code gets then the more you source shrinks by.
 
-This was cool. I had an array of arrays that represented a bunch of x,y co-ordinates, something like this:
+This was cool. I had an array of arrays that represented a bunch of [x, y] co-ordinates, something like this:
 
 <pre class='prettyprint lang-clj'>
 (def xy-pairs [
@@ -25,7 +28,7 @@ This was cool. I had an array of arrays that represented a bunch of x,y co-ordin
                ])
 </pre>
 
-I needed to scan through and get the maximum x and y from the set, in this case it'd be [10 11]. In C++ you'd I'd probably something like this
+I needed to scan through and get the maximum x and y from the set, in this case it'd be [10 11]. In C++ you'd probably do something like this:
 
 <pre class='prettyprint' lang-c++>
 using namespace std:
@@ -44,17 +47,19 @@ Pair findMax(PairVector const & _vec) {
 }
 </pre>
 
-I haven't compiled this, it probably doesn't work :D My first pass in clojure, was pretty much the above but I knew it wasn't right and that for a transform like this there would be some kind of solution based around using sequence manipulators and function composition.
+I haven't compiled this, it probably doesn't work :D My first pass in clojure was pretty much the above but it didn't feel right. For a transform like this there would be some kind of solution based around using manipulating lists and chaining together already existent functions.
 
 ## So How Would You Clojure It?
-Now it took a while and I come up with this:
+Now it took a while but I eventually come up with this:
 
 <pre class='prettyprint lang-clj'>
 (defn max-sequences [sx]
   (map #(apply max %) (apply map list sx)))
 </pre>
 
-It works and unlike the C++ version is specific to co-ordinate pairs and works with a sequence of any uniformly sized elements. Send it a load of x,y,z pairs and you get the correct result.
+It works and unlike the C++ version will work with n-dimensional coordinates rather than just x/y pairs. x/y, x/y/z, x/y/z/w? It doesn't care as long as all of the elements are the same dimensionally.
+
+## How Does It Work?
 
 There's two main parts. First it uses map to take the array of xy pairs and turn it into two lists, one of x and one of y. That's what the (apply map list sx) bit at the end of the line does. apply turns the list sx into a load of arguments for (map list).
 
@@ -84,7 +89,6 @@ Map is function that will iterate through an array applying another function to 
 
   ;;; Iteration two 
   (list 11 9 1)
-
 </pre>
 
 map returns the list of the results of each iteration so now have this:
@@ -131,7 +135,7 @@ The max x and y of the original list of co-ordinates. All from this
 
 ## Wow!
 
-Now I'm a nascent function / lisp programmer and there's likely an even better way to do this, probably with a reduce or something. Even so I'm happy I feel I'm getting this now and wiring this down has helped me order my thoughts about it a bit more.
+Now I'm a nascent functional / lisp programmer and there's likely an even better way to do this, probably with a reduce or something. Even so I'm happy. I feel I'm getting this now and wiring this down has helped me order my thoughts about it a bit more.
 
 I like that the solution is terse and I like that it would work if I sent it a list of any dimensional co-ordinates.
 
