@@ -11,13 +11,10 @@ block content
     -var x = "&nbsp;"
     span.aut= page.date.toDateString()
     h1= page.title
+    br
 
     tags = page.metadata.tags
-    if (tags)
-      p.tags
-        each t in tags.split(" ")
-          span.label.label-info= t
-          !{x}
+    mixin tags(tags)
 
   article.post
     section.content!= page.html

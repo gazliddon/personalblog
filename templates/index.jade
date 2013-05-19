@@ -16,23 +16,18 @@ block content
   - var articles  = _(_.union(dirs, files)).sortBy(function(item) { return -item.date
   - })
   
+  mixin tags
+
   each article in articles
     article.post
-      tags = article.metadata.tags
-
-
+ 
       header
-        -var x = "&nbsp;"
         br
         span.aut= article.date.toDateString()
 
         h1
           a(href=article.url)= article.title
-        if (tags)
-          p.tags
-            each t in tags.split(" ")
-              span.label.label-info= t
-              !{x}
+          mixin tags(article.metadata.tags)
 
       section.content!= article.intro
       if article.hasMore
