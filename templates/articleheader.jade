@@ -6,7 +6,13 @@ mixin articleheader(article)
 
   div.header
     div.topbit
-      span.aut= article.date.toDateString()
+      span.aut
+        = article.date.toDateString()
+        - var str = article.url+"#disqus_thread"
+        | &nbsp; &nbsp;
+ 
+        a(href=str)= ""
+
       span.alltags
         mixin tags(article.metadata.tags)
 
