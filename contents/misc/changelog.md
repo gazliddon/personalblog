@@ -1,6 +1,6 @@
 ---
 title: Site Updates
-date: 2013-05-19 20:53
+date: 2013-05-20 08:49
 author: gaz
 tags: blog changes 
 template: article.jade
@@ -8,9 +8,10 @@ template: article.jade
 
 ![changelog](/images/changelog.jpg) 
 
-Website changes tracked right here :)
+### 2013-05-20 08:47
+* NEW : Comment counts on post headings - blank if now comments: [commit](https://github.com/gazliddon/personalblog/commit/75dd50da9f3d75e697fd6d9943568b6d68415e33URL ) 
 
-## Changes
+## History
 
 ### 2013-05-19 20:53
 * NEW : Added Disqus comments system. Let's see how this goes
