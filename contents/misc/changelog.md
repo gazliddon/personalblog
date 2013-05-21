@@ -1,6 +1,6 @@
 ---
 title: Site Updates
-date: 2013-05-21 13:26
+date: 2013-05-21 16:51
 author: gaz
 tags: blog changes 
 template: article.jade
@@ -8,7 +8,8 @@ template: article.jade
 
 ![changelog](/images/changelog.jpg) 
 
-### 2013-05-21 13:24
+### 2013-05-21 16:51
+* ADD : FB meta tags on article pages [commit](https://github.com/gazliddon/personalblog/commit/6381d9f187c896ed75064ababef26490898dfa6b) 
 * FIX : right hand column loads first. Makes it easier for FB and G+ to auto pick the right image when adding a link: [commit](https://github.com/gazliddon/personalblog/commit/80044772a1553351e0ef92e9458c6f669279e5da)  
 * FIX : pages that show articles now has the blog name as the page title instead of the article title: [commit](https://github.com/gazliddon/personalblog/commit/7bf34b4d4665c1ecc2ffe356c9ed7ffbcee79216) 
 
