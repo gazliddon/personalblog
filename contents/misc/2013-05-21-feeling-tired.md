@@ -2,7 +2,7 @@
 title: (Was) A Bit Tired 
 date: 2013-05-21 06:38
 author: gaz
-tags: health 
+tags: health running
 template: article.jade
 ---
 
