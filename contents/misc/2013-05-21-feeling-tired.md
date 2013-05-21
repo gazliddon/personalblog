@@ -6,7 +6,7 @@ tags: health running
 template: article.jade
 ---
 
-**08:19** Not so tired now :) Pretty happy with that run, only 5km but a slight return to form. One of my short term goals was < 25m for a 5km again and on what was a fairly relaxed run I took a step towards that with a 24:47m time. Nice. It's really nice out there right now, good weather and not that windy either. The Tay is a beautiful place this time of day, I'm really lucky to have this place 
+**08:19** Not so tired now :) Pretty happy with that run, [only 5 and bit clicks](http://app.strava.com/activities/55431680) only 5 and bit clicks but a slight return to form. One of my short term goals was < 25m for a 5km again and on what was a fairly relaxed run I took a step towards that with a 24:47m time. Nice. It's really nice out there right now, good weather and not that windy either. The Tay is a beautiful place this time of day, I'm really lucky to have this place. 
 
 <a href="http://www.flickr.com/photos/gyratory/8764017300/" title="IMG_0380 by Gyratory, on Flickr"><img src="http://farm3.staticflickr.com/2817/8764017300_3415e4e2bf_z.jpg" width="640" height="255" alt="IMG_0380"></a>
 
