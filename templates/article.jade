@@ -1,5 +1,12 @@
 extends layout
 
+block new-meta
+   meta(property='og:title', content= page.title)
+   meta(property='og:url', content= locals.url + page.url)
+   -if (page.metadata.img)
+     meta(property='og:image', content= page.metadata.img)
+
+
 block content
   include articleheader
 
