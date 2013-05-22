@@ -1,0 +1,30 @@
+/* Background col */
+
+div#contentwrapper
+{
+    background-color: #f00;
+}
+
+/* Tags text */
+#dayglo>#content span.label.label-inverse
+{
+    color: rgb(205, 211, 255) 
+}
+
+/* All text color */
+#dayglo
+{
+    color: rgb(255, 255, 18);
+}
+
+/* Date */
+#dayglo>#content span.aut
+{
+    color: rgb(234, 255, 123);
+}
+
+/* Hyper linkes */
+#dayglo>#content a
+{
+    color: #0e0;
+};

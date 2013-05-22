@@ -37,9 +37,10 @@ html(lang='en')
 
    #wrapper
       #contentwrapper
-        #content
-          block content
-            h2 Welcome to zombocom!
+        block outercontent
+          #content
+            block content
+              h2 Welcome to zombocom!
 
-      include sidebar
+        include sidebar
          

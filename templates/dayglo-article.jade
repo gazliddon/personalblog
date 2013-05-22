@@ -1,22 +1,19 @@
 extends layout
 
 block new-meta
+   link(rel='stylesheet', href='/css/dayglo.css')
    meta(property='og:title', content= page.title)
    meta(property='og:url', content= locals.url + page.url)
    -if (page.metadata.img)
      meta(property='og:image', content= page.metadata.img)
 
 
-#dayglo
-  block content
-    include articleheader
-
-    block article
+block outercontent
+  #dayglo
+    #content
+      include articleheader
+    
       article.post
         mixin articleheader(page)
         section.content!= page.html
-
-       hr
-
-    #comments
-      include disqus
+ 
