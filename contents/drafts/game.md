@@ -3,11 +3,13 @@ title: Plaything
 date: 2013-05-21 16:51
 author: gaz
 tags: game 
-template: game.jade
+template: article.jade
 ---
-<div class='playfield'>
-<canvas class='playfield' id='game'>
-</canvas>
+
+<div id='playfield'>
 </div>
+
+
+<script src="/scripts/game.js"></script>
 
 

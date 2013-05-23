@@ -8,8 +8,8 @@ block new-meta
 
 
 block game-stuff
-   script(src='/scripts/game.js')
    link(rel="stylesheet", href="/css/game.css", type="text/css", media="screen, projection")
+   script(src='/scripts/game.js')
 
 block content
   include articleheader
@@ -17,4 +17,5 @@ block content
   article.post
     mixin articleheader(page)
     section.content!= page.html
+
 
