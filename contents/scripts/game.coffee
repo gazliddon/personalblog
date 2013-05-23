@@ -10,7 +10,7 @@ class Bob
   constructor: (@r, @x, @y)  ->
     @col = new Col
   draw: (_t) ->
-    @r.box @x, @y, 32, 32, @col.hex
+    @r.box @x, @y, 32, 32, @col.hex()
 
 class App
   constructor: ( canvasDivId ) ->
@@ -57,7 +57,7 @@ class App
     z = ColorUtil.rgbFloatToHex r,g,b
     @box 0,0,@width,@height,z
 
-    bob.draw for bob in @bobs
+    bob.draw() for bob in @bobs
 
   update: ->
 
