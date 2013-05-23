@@ -1,41 +1,26 @@
-class ColorUtil
-  @componentToHex: (c) ->
-    hex = c.toString 16
-    hex = "0" + hex if hex.length == 1
-    hex
+MathUtil = @mod.MathUtil
+Col = @mod.Col
+ColorUtil = @mod.ColorUtil
 
-  @rgbToHex: (r, g, b) ->
-    str = "#"
-    str += ColorUtil.componentToHex(r)
-    str += ColorUtil.componentToHex(g)
-    str += ColorUtil.componentToHex (b)
-    str
+class RGBCycler
+  constructor: (@offset, @speed) ->
 
-  @hexToRgb: (hex) ->
-    # Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-    shorthandRegex = /^\#?([a-f\d])([a-f\d])([a-f\d])$/i
 
-    func = (m, r, g, b) ->
-      r + r + g + g + b + b
-          
-    hex = hex.replace shorthandRegex, func
-  
-    result = /^\#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec hex
-
-    ret =
-      r: parseInt result[1], 16
-      g: parseInt result[2], 16
-      b: parseInt result[3], 16
+class Bob
+  constructor: (@r, @x, @y)  ->
+ #   @col = new Col
+  draw: (_t) ->
+  #  @r.box @x, @y, 32, 32, @col.hex
 
 class App
   constructor: ( canvasDivId ) ->
     # Find the div, create a canvas, add it to the div
     theDiv = $("#playfield").css("width": "600","height": "300" )
  
-    width =  theDiv.innerWidth()
-    height = theDiv.innerHeight()
+    @width =  theDiv.innerWidth()
+    @height = theDiv.innerHeight()
 
-    canvas = $ '<canvas/>', { width: width, height: height }
+    canvas = $ '<canvas/>', { width: @width, height: @height }
     $(canvasDivId).append canvas
 
     # Set up my vars, canvas obj and 2d context
@@ -43,21 +28,33 @@ class App
     @canvas = canvas[0]
     @ctx = @canvas.getContext "2d"
 
-    @ctx.fillStyle = '#FF0000'
-    @ctx.fillRect 0,0,150,75
     @val = 0
+
+    # Make a load of bobs
+    @numOfBobs = 100
+    makeBob = (i) ->
+      new Bob @, 10,10, 
+    @bobs = makeBob(i) for i in [0..@numOfBobs]
 
     # Call draw @ 60hz
     window.setInterval =>
       @draw()
     , 1000/60
 
+
+
+  box: (x,y,w,h, col) ->
+    @ctx.fillStyle = col
+    @ctx.fillRect x,y,w,h
+    
   draw: ->
-    @val = @val + 1
-    @val = @val % 255
-    z = ColorUtil.rgbToHex @val,0,0
-    @ctx.fillStyle = z
-    @ctx.fillRect 0,0,150,75
+  
+    @val = @val + (60/1000)
+    r = (Math.cos(@val)+1)/2
+    g = (Math.cos(@val * 2 + 0.1)+1)/2
+    b = (Math.cos(@val * 0.5 + 0.11)+1)/2
+    z = ColorUtil.rgbFloatToHex r,g,b
+    @box 0,0,@width,@height,z
 
 
   update: ->
@@ -65,7 +62,3 @@ class App
 $ ->
   new App("#playfield")
 
-
-    
-
-    
