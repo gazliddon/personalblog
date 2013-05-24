@@ -11,6 +11,6 @@
     [
 	"./node_modules/wintersmith-sass",
 	"./node_modules/wintersmith-coffee",
-	"./node_modules/wintersmith-browserfy"
+	"./node_modules/wintersmith-browserify"
     ]
 }
