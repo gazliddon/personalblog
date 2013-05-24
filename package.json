@@ -1,7 +1,7 @@
 {
   "name": "personalblog",
   "version": "0.0.0",
-  "description": "workblog ======== Sources for my work blog",
+  "description": "personal blog ======== Sources for my personal blog",
   "main": "index.js",
   "dependencies": {
     "wintersmith-coffee": "~0.1.2",
