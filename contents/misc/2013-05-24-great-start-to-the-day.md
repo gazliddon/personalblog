@@ -4,6 +4,7 @@ tags: running cycling
 author: gaz
 template: article.jade
 date: 2013-05-24 11:33
+img: http://s3.amazonaws.com/tripphoto.runkeeper.com/RUdyowPQVLqeSJVPkgeTyrfl.jpg
 ---
 
 Woo! Happy with both of these :)
