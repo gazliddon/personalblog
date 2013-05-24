@@ -7,11 +7,16 @@ date: 2013-05-24 11:33
 img: http://s3.amazonaws.com/tripphoto.runkeeper.com/RUdyowPQVLqeSJVPkgeTyrfl.jpg
 ---
 
-Woo! Happy with both of these :)
+Woo! Actually happy with both of these:
 
 <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='http://app.strava.com/activities/55963252/embed/0c2c3b13f24fc895ede8e85f2818a5c03dc5ebe9'></iframe>
 
+Man I'd really like that Tayside Run To The Ferry number one spot, only 8 seconds slower than the current fastest :D Strava's great for throwing up challenges like this.
+
+<br>
+
 <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='http://app.strava.com/activities/55980788/embed/eb80459acd9e9aa84df1a785ce6910642782f10f'></iframe>
+
 
 ## Feeling Chipper!
 <br>
