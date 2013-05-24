@@ -9,8 +9,8 @@
 
     "plugins":
     [
+	"./node_modules/wintersmith-browserify",
 	"./node_modules/wintersmith-sass",
-	"./node_modules/wintersmith-coffee",
-	"./node_modules/wintersmith-browserify"
+	"./node_modules/wintersmith-coffee"
     ]
 }
