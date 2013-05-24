@@ -15,7 +15,8 @@ class ColorUtil
 
   @rgbFloatToHex: (r,g,b) ->
     xform = (_v) ->
-      Math.floor(MathUtil.fract(_v)*255)
+      Math.floor((MathUtil.clamp 0, 1,_v) * 255)
+
     @rgbToHex xform(r), xform(g), xform(b)
 
   @hexToRgb: (hex) ->
@@ -34,6 +35,7 @@ class ColorUtil
       g: parseInt result[2], 16
       b: parseInt result[3], 16
 
+
 class Col
   constructor: ->
     @r = 1
@@ -43,6 +45,16 @@ class Col
   hex: ->
     ColorUtil.rgbFloatToHex @r, @g, @b
 
+  blend: (_colA, _colB, _t) ->
+    _t = MathUtil.clamp 0,1,_t
+
+    interp = (a,b,t) ->
+      a+((b-a) * t)
+
+    @r = interp _colA.r, _colB.r, _t
+    @g = interp _colA.g, _colB.g, _t
+    @b = interp _colA.b, _colB.b, _t
+    @
 
 @mod.ColorUtil = ColorUtil
 @mod.Col = Col

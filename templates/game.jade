@@ -1,21 +1,4 @@
-extends layout
+extends article
 
-block new-meta
-   meta(property='og:title', content= page.title)
-   meta(property='og:url', content= locals.url + page.url)
-   -if (page.metadata.img)
-     meta(property='og:image', content= page.metadata.img)
-
-
-block game-stuff
-   link(rel="stylesheet", href="/css/game.css", type="text/css", media="screen, projection")
-   script(src='/scripts/game.js')
-
-block content
-  include articleheader
-
-  article.post
-    mixin articleheader(page)
-    section.content!= page.html
 
 
