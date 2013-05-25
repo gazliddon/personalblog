@@ -23,22 +23,21 @@ class Key
 
 class KeyMap
 
-  constructor: (@attachToName) ->
+  constructor: ( @id ) ->
     @keymap = {}
 
-    attachObj = $(@attachToName)
-
-    attachObj.attr "contentEditable", "true"
-    attachObj[0].contentEditable = true
-
-    attachObj.blur =>
+    @attachObj = $(@id)
+    
+    @attachObj.blur =>
       @lostFocus()
 
-    attachObj.keydown (_e) =>
+    @attachObj.keydown (_e) =>
       @keyDown _e.keyCode
+      console.log _e
 
-    attachObj.keyup (_e) =>
+    @attachObj.keyup (_e) =>
       @keyUp _e.keyCode
+      console.log _e
 
   # Reset all keys to up when we lose focus
   lostFocus: ->
