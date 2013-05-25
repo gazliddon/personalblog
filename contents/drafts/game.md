@@ -9,11 +9,6 @@ template: game.jade
 <div id='playfield'>
 </div>
 
-<script src="/scripts/gazmod.js"></script>
-<script src="/scripts/util.js"></script>
-<script src="/scripts/keymap.js"></script>
-<script src="/scripts/col.js"></script>
-<script src="/scripts/osc.js"></script>
 <script src="/scripts/game.js"></script>
 
 

@@ -1,4 +1,4 @@
-MathUtil = @mod.MathUtil
+Util = require './util'
 
 class ColorUtil
   @componentToHex: (c) ->
@@ -15,7 +15,7 @@ class ColorUtil
 
   @rgbFloatToHex: (r,g,b) ->
     xform = (_v) ->
-      Math.floor((MathUtil.clamp 0, 1,_v) * 255)
+      Math.floor( (Util.clamp 0, 1,_v) * 255)
 
     @rgbToHex xform(r), xform(g), xform(b)
 
@@ -36,7 +36,7 @@ class ColorUtil
       b: parseInt result[3], 16
 
 
-class Col
+class Color
   constructor: ->
     @r = 1
     @g = 1
@@ -46,7 +46,7 @@ class Col
     ColorUtil.rgbFloatToHex @r, @g, @b
 
   blend: (_colA, _colB, _t) ->
-    _t = MathUtil.clamp 0,1,_t
+    _t = Util.clamp 0,1,_t
 
     interp = (a,b,t) ->
       a+((b-a) * t)
@@ -56,5 +56,5 @@ class Col
     @b = interp _colA.b, _colB.b, _t
     @
 
-@mod.ColorUtil = ColorUtil
-@mod.Col = Col
+exports.Color = Color
+exports.ColorUtil = ColorUtil

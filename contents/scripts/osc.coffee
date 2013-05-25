@@ -14,6 +14,3 @@ class CosOsc extends Oscillator
   constructor: (@lo, @hi, @speed, @offset) ->
     super @cosFunc, @lo, @hi, @speed, @offset
 
-
-@mod.Oscillator = Oscillator
-@mod.CosOsc = CosOsc

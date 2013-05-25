@@ -56,5 +56,4 @@ class KeyMap
     @keymap[ _e ] ?= new Key
 
 
-# --------------------------------------------------------------------------------
-@mod.KeyMap = KeyMap
+exports.KeyMap = KeyMap

@@ -1,18 +1,18 @@
-MathUtil = @mod.MathUtil
-Col = @mod.Col
-ColorUtil = @mod.ColorUtil
-KeyMap = @mod.KeyMap
+Util = require './util'
+Cols = require './col'
+Keys = require './keys'
+
+Color = Cols.Color
+ColorUtil = Cols.ColorUtil
+KeyMap = Keys.KeyMap
+
 # --------------------------------------------------------------------------------
-
-
-
-
 class RGBCycler
   constructor: (@offset, @speed) ->
 
 class Bob
   constructor: (@i, @r, @x, @y)  ->
-    @col = new Col
+    @col = new Color
 
   draw: (_t) ->
     _t /= 100
@@ -35,7 +35,7 @@ class App
     canvas = $ '<canvas/>', { id: id,width: @width, height: @height }
     $(canvasDivId).append canvas
 
-    @keyMap = new KeyMap id
+#    @keyMap = new KeyMap id
 
     # Set up my vars, canvas obj and 2d context
 
