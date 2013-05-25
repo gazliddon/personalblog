@@ -20,6 +20,7 @@ setCol = (_scale, _col, _offset, _t) ->
 class SquareBob extends Bob
   constructor: (@i, @r, @x, @y)  ->
     super
+
     @isAlive = true
     @col = new Cols.Color
     @size = 40
@@ -27,14 +28,15 @@ class SquareBob extends Bob
       setCol 1, @col, @i, _t
 
   draw: (_t) ->
-    _t = _t - @startTime
+    _t = Date.now() - @startTime
     _t /= 100
-    toff = (_t*10) % 600
-    x = @x + @i * @size + toff 
-    y = @y + 10 * Util.smoothStep(100,500, @x)
+    toff = (_t * 10) % 600
+    x = @x + toff 
+    y = @y
   
     @updateCol _t
-    @r.circle x,y, (Math.cos(_t / 10) + 1) * 20, @col.hex()
+
+    @r.circle x, y, 20, @col.hex()
 
 
 exports.Bob = Bob

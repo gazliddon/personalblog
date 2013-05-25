@@ -20,12 +20,8 @@ class ThisApp extends CanvasApp
     super _id
 
   onClick: (e) ->
-    console.log @
-    console.log @bobs
     newBob = new SquareBob 0, @canvas, e.offsetX,  e.offsetY
-    newBob.draw 0
     @bobs.push newBob
-    console.log @bobs
 
   clearScr: (_val) ->
     r = (Math.cos(_val)+1)/2
@@ -35,10 +31,14 @@ class ThisApp extends CanvasApp
     @canvas.clear z
 
   doBobs: ->
-    bob.update( @t ) for bob in @bobs
-    bob.draw( @t ) for bob in @bobs
+    bob.update( @time ) for bob in @bobs
+
+    @bobs = _.filter @bobs, (_bob)  ->
+      _bob.isAlive
+      
+    bob.draw( @time ) for bob in @bobs
   
-  draw: (_dt) ->
+  draw: ( _dt ) ->
     @clearScr @time / 1000
     @doBobs()
 
