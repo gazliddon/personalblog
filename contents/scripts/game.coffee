@@ -6,6 +6,7 @@ Keys = require './keys'
 Bobs = require './bobs'
 
 SquareBob = Bobs.SquareBob
+doExplosion = Bobs.doExplosion
 
 Col = require './col'
 ColorUtil = Col.ColorUtil
@@ -19,9 +20,16 @@ class ThisApp extends CanvasApp
 
     super _id
 
+  addBobs: (_bobArray) ->
+    @bobs = @bobs.concat _bobArray
+
   onClick: (e) ->
-    newBob = new SquareBob 0, @canvas, e.offsetX,  e.offsetY
-    @bobs.push newBob
+#    newBob = new SquareBob @canvas, e.offsetX,  e.offsetY
+#    @bobs.push newBob
+
+    splodeBobs = doExplosion @canvas, e.offsetX,  e.offsetY, 100
+    @addBobs splodeBobs
+    
 
   clearScr: (_val) ->
     r = (Math.cos(_val)+1)/2
@@ -31,15 +39,20 @@ class ThisApp extends CanvasApp
     @canvas.clear z
 
   doBobs: ->
-    bob.update( @time ) for bob in @bobs
+    t = Date.now()
+    bob.update( t ) for bob in @bobs
 
     @bobs = _.filter @bobs, (_bob)  ->
       _bob.isAlive
       
-    bob.draw( @time ) for bob in @bobs
+    bob.draw( t ) for bob in @bobs
   
   draw: ( _dt ) ->
+    #    @bobs.push newBob
+
+    @canvas.ctx.globalCompositeOperation = 'source-over'
     @clearScr @time / 1000
+    @canvas.ctx.globalCompositeOperation = 'lighter'
     @doBobs()
 
 
