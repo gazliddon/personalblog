@@ -1,13 +1,12 @@
 _ = require 'underscore'
 
-CanvasApp = require('./canvasapp').CanvasApp
+CanvasApp = require('./canvasapp')
 
 Keys = require './keys'
-KeyMap = Keys.KeyMap
 Bobs = require './bobs'
+
 Col = require './col'
 ColorUtil = Col.ColorUtil
-
 
 class ThisApp extends CanvasApp
   constructor: (_id) ->

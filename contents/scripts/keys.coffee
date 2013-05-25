@@ -21,7 +21,7 @@ class Key
     @wentDown = (@current == true) and (@lastTime == false)
     @wentUp = (@current == false) and (@lastTime == true)
 
-class KeyMap
+class Keys
 
   constructor: ( @id ) ->
     @keymap = {}
@@ -55,4 +55,4 @@ class KeyMap
     @keymap[ _e ] ?= new Key
 
 
-exports.KeyMap = KeyMap
+module.exports = Keys

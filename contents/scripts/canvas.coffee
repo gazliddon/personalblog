@@ -28,4 +28,4 @@ class Canvas
   clear: (_col) ->
     @box 0,0,@width,@height, _col
 
-exports.Canvas = Canvas
+module.exports = Canvas

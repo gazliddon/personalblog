@@ -4,7 +4,7 @@ Canvas = require './canvas'
 class CanvasApp
   constructor: ( @canvasDivId ) ->
     @lastTime = @startTime = Date.now()
-    @canvas = new Canvas.Canvas @canvasDivId, 600, 450
+    @canvas = new Canvas @canvasDivId, 600, 450
 
     # Call draw @ 60hz
     window.setInterval =>
@@ -19,4 +19,4 @@ class CanvasApp
     @draw @dt
 
 
-exports.CanvasApp = CanvasApp
+module.exports = CanvasApp
