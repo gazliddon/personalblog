@@ -8,9 +8,9 @@ class Bob
     @startTime = Date.now()
 
   draw: (_t) ->
+    console.log "poo"
 
   update: (_t) ->
-
 
 setCol = (_scale, _col, _offset, _t) ->
   _col.r = (Math.cos((_t *_scale)  + _offset) + 1) /2
@@ -34,19 +34,8 @@ class SquareBob extends Bob
     y = @y + 10 * Util.smoothStep(100,500, @x)
   
     @updateCol _t
-    # @r.box x, y, @size, @size, @col.hex()
     @r.circle x,y, (Math.cos(_t / 10) + 1) * 20, @col.hex()
-
-
-class Eff2 extends Bob
-  constructor: (@draw, @x, @y, @duration) ->
-    super
-    @isAlive = true
-
-  draw: (_t) ->
-    @draw.circle @
 
 
 exports.Bob = Bob
 exports.SquareBob = SquareBob
-exports.Eff2 = Eff2
