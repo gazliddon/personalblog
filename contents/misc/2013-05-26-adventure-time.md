@@ -1,11 +1,16 @@
 ---
-title: Adventure Time
+title: What The Glob?
 tags: adventuretime
 author: gaz
 template: article.jade
 date: 2013-05-28 08:34
-img: http://farm6.staticflickr.com/5464/8836655073_1c1d8f32af.jpg
+img: http://24.media.tumblr.com/tumblr_m24ffvkHYh1rtqw0ko1_500.png
 ---
+
+<div class='middle'>
+<img src= 'http://24.media.tumblr.com/tumblr_m24ffvkHYh1rtqw0ko1_500.png' >
+</div>
+
 
 Amazing [Adventure Time](http://adventuretime.wikia.com/wiki/Adventure_Time_with_Finn_and_Jake_Wiki) today, The Mega Frog that culminated in this slice of bizarre:
 
