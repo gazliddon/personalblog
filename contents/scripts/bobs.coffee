@@ -7,68 +7,109 @@ ColorUtil = Col.ColorUtil
 Util = require './util'
 
 class Bob
-  constructor: (@r) -> 
-    @isAlive = true
+  constructor: (@duration) -> 
     @startTime = Date.now()
 
-  draw: (_t) ->
+  draw: (_canvas) ->
+    @doDraw _canvas
+
+  isAlive: ->
+    @time < @duration
 
   update: (_t) ->
+    @realTime = _t
+    @time = _t - @startTime
+
+    if @isAlive()
+      @remaing = @duration - @time
+      @percThrough = @time / @duration
+      @percLeft = 1 - @percThrough
+      
+      @doUpdate()
+
+  doDraw: (_canvas) ->
+
+  doUpdate: ->
 
 
-setCol = (_scale, _col, _offset, _t) ->
-  _col.r = (Math.cos((_t *_scale)  + _offset) + 1) /2
-  _col.g = (Math.cos((_t*_scale) + _offset+0.1) + 1) /2
-  _col.b = (Math.cos((_t*_scale) + _offset+ 0.2) + 1) /2
+class BobManager
+  constructor: ->
+    @bobs = []
 
-class SquareBob extends Bob
-  constructor: ( _r, @x, @y)  ->
-    super _r
+  addBob: (_b) ->
+    @bobs.push _b
 
-    @isAlive = true
-    @col = new Cols.Color
-    @size = 40
+  update: (_t) ->
+    bob.update _t for bob in @bobs
 
-    @updateCol = (_t) =>
-      setCol 1, @col,0, _t
+    @bobs = _.filter @bobs, (_bob)  ->
+      _bob.isAlive
 
-  draw: (_t) ->
-    _t = _t - @startTime
-    _t /= 100
-    toff = (_t * 10) % 600
-    x = @x + toff 
-    y = @y
-  
-    @updateCol _t
+  draw: (_canvas) ->
+    bob.draw(_canvas) for bob in @bobs
 
-    @r.circle x, y, 20, @col.hex()
+  bobsActive: ->
+    @bobs.length
 
 
 class SplodeBob extends Bob
 
-  constructor: (_r, @x, @y, @xv, @yv) ->
-    super _r
-    @destTime = @startTime + 2000
+  constructor: ( @x, @y, @xv, @yv) ->
+    super  2000
 
-  update: (_t) ->
-    @timeLeft = 1 - (_t - @startTime) / (@destTime - @startTime)
-    @isAlive = _t < @destTime
-  
-  draw: (_t) ->
+  doUpdate: ->
     @x += @xv
     @y += @yv
     @yv += 0.1
-    @r.circle @x, @y, 10 , ColorUtil.rgbFloatToHex(@timeLeft, @timeLeft, @timeLeft)
+    @col = ColorUtil.rgbFloatToHex(@percLeft, @percLeft, @percLeft)
+  
+  doDraw: (_canvas) ->
+    _canvas.circle @x, @y, 10, @col 
 
 
-doExplosion = (_r, _x, _y, _num) ->
-  ret = _.map [0..._num], ->
-    xv = (Math.random() * 10) - 5
-    yv = -((Math.random() * 20) + 3)
-    new SplodeBob _r, _x, _y, xv, yv
+class SplodeSpawner  extends Bob
 
-  ret
+  constructor: (  @x, @y, @duration, @splodes) ->
+    super  @duration
+    @interval = @duration / @splodes
+    @nextSplode =  0
+    @manager = new BobManager
+    @state = 'sploding'
+    @alive = true
+
+  doSplodes: ->
+    if @splodes <= 0
+      @state = 'waiting'
+    else
+      if @time > @nextSplode
+        @splodes = @splodes - 1
+        @nextSplode += @interval
+
+        ret = _.map [0...20], =>
+          xv = (Math.random() * 10) - 5
+          yv = -((Math.random() * 20) + 3)
+          @manager.addBob (new SplodeBob @x, @y, xv, yv)
+
+  doWaiting: ->
+    @alive = @manager.bobsActive() != 0
+
+  doUpdate: ->
+    @manager.update @realTime
+
+    switch @state
+      when 'sploding' then @doSplodes()
+      when 'waiting' then @doWaiting()
+
+  isAlive: ->
+    @alive
+  
+  doDraw: (_canvas) ->
+    @manager.draw(_canvas)
+
+
+
 
 exports.Bob = Bob
-exports.SquareBob = SquareBob
-exports.doExplosion = doExplosion
+exports.BobManager = BobManager
+exports.SplodeSpawner = SplodeSpawner
+

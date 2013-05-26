@@ -5,15 +5,14 @@ CanvasApp = require('./canvasapp')
 Keys = require './keys'
 Bobs = require './bobs'
 
-SquareBob = Bobs.SquareBob
-doExplosion = Bobs.doExplosion
+SplodeSpawner = Bobs.SplodeSpawner
 
 Col = require './col'
 ColorUtil = Col.ColorUtil
 
 class ThisApp extends CanvasApp
   constructor: (_id) ->
-    @bobs = []
+    @bobsManager = new Bobs.BobManager @canvas
 
     $(_id).mousedown (_e) =>
       @onClick _e
@@ -24,12 +23,9 @@ class ThisApp extends CanvasApp
     @bobs = @bobs.concat _bobArray
 
   onClick: (e) ->
-#    newBob = new SquareBob @canvas, e.offsetX,  e.offsetY
-#    @bobs.push newBob
-
-    splodeBobs = doExplosion @canvas, e.offsetX,  e.offsetY, 100
-    @addBobs splodeBobs
-    
+    bang = new SplodeSpawner  e.offsetX,  e.offsetY, 3000, 10
+    @bobsManager.addBob bang
+    console.log @bobsManager
 
   clearScr: (_val) ->
     r = (Math.cos(_val)+1)/2
@@ -38,22 +34,12 @@ class ThisApp extends CanvasApp
     z = ColorUtil.rgbFloatToHex r,g,b
     @canvas.clear z
 
-  doBobs: ->
-    t = Date.now()
-    bob.update( t ) for bob in @bobs
-
-    @bobs = _.filter @bobs, (_bob)  ->
-      _bob.isAlive
-      
-    bob.draw( t ) for bob in @bobs
-  
   draw: ( _dt ) ->
-    #    @bobs.push newBob
-
     @canvas.ctx.globalCompositeOperation = 'source-over'
     @clearScr @time / 1000
     @canvas.ctx.globalCompositeOperation = 'lighter'
-    @doBobs()
+    @bobsManager.update Date.now()
+    @bobsManager.draw @canvas
 
 
 $ ->
