@@ -12,6 +12,7 @@ Keys = require './keys'
 KeysManager = Keys.KeysManager
 KeyCodes = Keys.KeyCodes
 
+Util = require './util'
 
 cyclingCol = (_val) ->
   r = (Math.cos(_val)+1)/2
@@ -43,18 +44,25 @@ class Player extends Bobs.Bob
     _canvas.box @x, @y, 64, 64, cyclingCol @time/100 + 100
 
   doUpdate: ->
-
+    speedAdd = 2.5
     if @up()
-      @yv -= 0.01
+      @yv -= speedAdd
 
     if @down()
-      @yv += 0.01
+      @yv += speedAdd
 
     if @left()
-      @xv -= 0.01
+      @xv -= speedAdd
 
     if @right()
-      @xv += 0.01
+      @xv += speedAdd
+
+    max = 40
+    @xv = Util.clamp -max, max, @xv
+    @yv = Util.clamp -max, max, @yv
+
+    @xv -= @xv / 5
+    @yv -= @yv / 5
 
     @x = @x + @xv
     @y = @y + @yv
@@ -66,8 +74,7 @@ class ThisApp extends CanvasApp
 
     @bobsManager = new Bobs.BobManager
 
-#    @player = new Player @keys, 100,100
-
+    @player = new Player @canvas.keys, 100,100
     @bobsManager.addBob @player
 
     $(_id).mousedown (_e) =>
