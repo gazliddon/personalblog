@@ -1,13 +1,12 @@
 # Class to handle the keyboard
+KeyCodes =
+  KEY_LEFT:   37
+  KEY_UP:     38
+  KEY_RIGHT:  39
+  KEY_DOWN:   40
+  KEY_SPACE:  32
 
 class Key
-  @KeyCodes :
-    KEY_LEFT:   37
-    KEY_UP:     38
-    KEY_RIGHT:  39
-    KEY_DOWN:   40
-    KEY_SPACE:  32
-
   constructor: ->
     @reset()
 
@@ -25,7 +24,7 @@ class Key
     @wentUp = (@current == false) and (@lastTime == true)
     @repeat = _down && (@current == true) && (@repeat == false)
 
-class Keys
+class KeysManager
 
   constructor: ( @id ) ->
     console.log "Constructed Keys"
@@ -68,4 +67,5 @@ class Keys
   getKey: ( _e ) ->
     @keymap[ _e ] ?= new Key
 
-module.exports = Keys
+exports.KeysManager = KeysManager
+exports.KeyCodes = KeyCodes

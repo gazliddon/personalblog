@@ -1,7 +1,7 @@
 # Crappy canvas abstraction with some silly drawing stuff
 
 Keys = require './keys'
- 
+
 class Canvas
   constructor: (elemId, width, height) ->
   
@@ -17,7 +17,7 @@ class Canvas
     @ctx.canvas.width = @width
     @ctx.canvas.height = @height
 
-    @keys = new Keys id
+    @keys = new Keys.KeysManager id
 
   box: (x,y,w,h, col) ->
     @ctx.fillStyle = col

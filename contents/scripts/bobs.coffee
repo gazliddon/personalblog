@@ -6,6 +6,8 @@ Col = require './col'
 ColorUtil = Col.ColorUtil
 Util = require './util'
 
+# A bob
+# 
 class Bob
   constructor: (@duration) -> 
     @startTime = Date.now()
@@ -35,6 +37,7 @@ class Bob
   doUpdate: ->
 
 
+# Manages a load of bobs
 class BobManager
   constructor: ->
     @bobs = []
@@ -43,8 +46,10 @@ class BobManager
     @bobs.push _b
 
   update: (_t) ->
+    # Update all the bobs
     bob.update _t for bob in @bobs
 
+    # Filter out the dead-uns
     @bobs = _.filter @bobs, (_bob)  ->
       _bob.isAlive()
 

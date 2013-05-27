@@ -8,6 +8,9 @@ SplodeSpawner = require('./splode').SplodeSpawner
 Col = require './col'
 ColorUtil = Col.ColorUtil
 
+Keys = require './keys'
+KeysManager = Keys.KeysManager
+KeyCodes = Keys.KeyCodes
 
 
 cyclingCol = (_val) ->
@@ -24,14 +27,37 @@ class Player extends Bobs.Bob
     @xv = 0
     @yv = 0
 
+    @up = ->
+      @keys.getKey(KeyCodes.KEY_UP).current
+
+    @down = ->
+      @keys.getKey(KeyCodes.KEY_DOWN).current
+
+    @left = ->
+      @keys.getKey(KeyCodes.KEY_LEFT).current
+
+    @right = ->
+      @keys.getKey(KeyCodes.KEY_RIGHT).current
+
   doDraw: (_canvas) ->
     _canvas.box @x, @y, 64, 64, cyclingCol @time/100 + 100
 
   doUpdate: ->
+
+    if @up()
+      @yv -= 0.01
+
+    if @down()
+      @yv += 0.01
+
+    if @left()
+      @xv -= 0.01
+
+    if @right()
+      @xv += 0.01
+
     @x = @x + @xv
     @y = @y + @yv
-
-
 
 
 class ThisApp extends CanvasApp
@@ -40,7 +66,7 @@ class ThisApp extends CanvasApp
 
     @bobsManager = new Bobs.BobManager
 
-    @player = new Player @keys, 100,100
+#    @player = new Player @keys, 100,100
 
     @bobsManager.addBob @player
 
