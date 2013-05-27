@@ -8,6 +8,7 @@ include tags
 html(lang='en')
   head
     block new-meta
+    
     block head
       meta(charset='utf-8')
       meta(property="og:site_name", content=locals.name)
@@ -18,7 +19,10 @@ html(lang='en')
         block title
           = locals.name
   
-    script(src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js')
+    script(src='/google-code-prettify/run_prettify.js')
+
+    link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
+
     script(src='/css/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
     script(src='/scripts/disquscommentcount.js')
@@ -27,8 +31,6 @@ html(lang='en')
     script(src='/lightview/js/lightview/lightview.js')
     link(rel='stylesheet', href='/lightview/css/lightview/lightview.css')
  
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
     link(rel='stylesheet', href='/css/screen-dark.css', type='text/css', media='screen, projection')
 
     link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
