@@ -3,8 +3,6 @@
 _ = require 'underscore'
 
 Col = require './col'
-ColorUtil = Col.ColorUtil
-Util = require './util'
 Bobs = require './bobs'
 
 class SplodeBob extends Bobs.Bob
@@ -16,13 +14,13 @@ class SplodeBob extends Bobs.Bob
     @x += @xv
     @y += @yv
     @yv += 0.1
-    @col = ColorUtil.rgbFloatToHex(@percLeft, @percLeft, @percLeft)
+    @col = Col.ColorUtil.rgbFloatToHex(@percLeft, @percLeft, @percLeft)
   
   doDraw: (_canvas) ->
     _canvas.box @x, @y, 32, 32, @col
 
 
-class SplodeSpawner  extends Bobs.Bob
+class SplodeSpawner extends Bobs.Bob
 
   constructor: (  @x, @y, @duration, @splodes) ->
     super  @duration
