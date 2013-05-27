@@ -14,7 +14,10 @@ class Bob
     @doDraw _canvas
 
   isAlive: ->
-    @time < @duration
+    if @duration >= 0
+      @time < @duration
+    else
+      true
 
   update: (_t) ->
     @realTime = _t
