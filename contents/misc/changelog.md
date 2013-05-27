@@ -1,17 +1,22 @@
 ---
 title: Site Updates
-date: 2013-05-26 07:37
+date: 2013-05-27 18:18
 author: gaz
 tags: blog changes 
 template: article.jade
 ---
 
 ![changelog](/images/changelog.jpg) 
+### 2013-05-27 18:18
+* FIX : Added a first pass on responsive design for iPad / iPhone / mobile devices. It's not great, just drops the side bar and implemented pretty badly. Will do for now: [commit](https://github.com/gazliddon/personalblog/commit/1bed956176ab87ddbda8d0656fe380a21dca2863)
+* MERGE: Also merged in the work I'd been doing on some game stuff
+
+
+## History
 
 ### 2013-05-26 07:37
 * ADD: A lightbox, chose [Lighview](http://projects.nickstakenburg.com/lightview). You can see it [on this page here](http://zeropager.com/misc/2013-05-26-yum.html) : [commit](https://github.com/gazliddon/personalblog/commit/6f9a72d40f96a20d7e6152ed82923bcae250bd47) 
 
-## History
 
 ### 2013-05-21 16:51
 * ADD : FB meta tags on article pages [commit](https://github.com/gazliddon/personalblog/commit/6381d9f187c896ed75064ababef26490898dfa6b) 
