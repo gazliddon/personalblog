@@ -1,8 +1,17 @@
 extends layout
 
-block content
-  include author
+block new-meta
   include getarticles
+  - if (articles.length > 0 )
+
+   meta(property='og:title', content= articles[0].title)
+   meta(property='og:url', content= locals.url + articles[0].url)
+   -if (articles[0].metadata.img)
+     meta(property='og:image', content= articles[0].metadata.img)
+
+block content
+  include getarticles
+  include author
   include articleheader
 
   mixin tags
