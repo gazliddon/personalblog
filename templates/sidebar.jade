@@ -9,31 +9,30 @@ mixin serviceIcon(file, url )
     a(href='/') gaz liddon zeropager
 
   #services
-    div
-      div.group
-        div.text 
-          | make
-        div.icons
-          mixin serviceIcon("soundcloud", "https://soundcloud.com/gyratory")
-          mixin serviceIcon("flickr",     "http://www.flickr.com/photos/gyratory")
-          mixin serviceIcon("github",     "https://github.com/gazliddon")
- 
-        div.text
-          | social
-        div.icons
-          mixin serviceIcon("rss",        "/feed.xml" )
-          mixin serviceIcon("facebook",   "https://www.facebook.com/gazliddon")
-          mixin serviceIcon("gplus",      "https://plus.google.com/105572989283882496222/posts")
-          mixin serviceIcon("twitter",    "https://twitter.com/gyratory")
+    div.group
+      div.text
+        | make
+      div.icons
+        mixin serviceIcon("soundcloud", "https://soundcloud.com/gyratory")
+        mixin serviceIcon("flickr",     "http://www.flickr.com/photos/gyratory")
+        mixin serviceIcon("github",     "https://github.com/gazliddon")
 
-      div.group
-        div.text
-          | misc
-        div.icons
-          mixin serviceIcon("fitocracy",  "https://www.fitocracy.com/profile/gazliddon/?feed")
-          mixin serviceIcon("linkedin",   "http://www.linkedin.com/pub/gary-liddon/0/840/792")
-          mixin serviceIcon("strava",     "http://app.strava.com/athletes/1074483")
-          mixin serviceIcon("runkeeper",  "http://runkeeper.com/user/gazliddon/profile")
+      div.text
+        | social
+      div.icons
+        mixin serviceIcon("rss",        "/feed.xml" )
+        mixin serviceIcon("facebook",   "https://www.facebook.com/gazliddon")
+        mixin serviceIcon("gplus",      "https://plus.google.com/105572989283882496222/posts")
+        mixin serviceIcon("twitter",    "https://twitter.com/gyratory")
+
+    div.group
+      div.text
+        | misc
+      div.icons
+        mixin serviceIcon("fitocracy",  "https://www.fitocracy.com/profile/gazliddon/?feed")
+        mixin serviceIcon("linkedin",   "http://www.linkedin.com/pub/gary-liddon/0/840/792")
+        mixin serviceIcon("strava",     "http://app.strava.com/athletes/1074483")
+        mixin serviceIcon("runkeeper",  "http://runkeeper.com/user/gazliddon/profile")
   
 
 
