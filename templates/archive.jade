@@ -2,12 +2,10 @@
 extends layout
 
 block content
+  include getarticles
+
   != page.html
-  - var archive = _.chain(contents.articles._.directories).map(function(item) {
-  -   return item.index
-  - }).compact().sortBy(function(item) {
-  -   return -item.date
-  - }).groupBy(function(item) {
+  - var archive = _.chain(articles).groupBy(function(item) {
   -   return item.date.getFullYear()
   - }).value()
   - var map = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -21,7 +19,16 @@ block content
           each articles, month in months
             li
               strong= month
-              each article in articles
-                br
-                a(href=article.url)= article.title
+              table
+                thead
+                  tr: Posts
+                tbody
+                  each article in articles
+                    tr
+                      td
+                        a(href=article.url)= article.title
+                      td
+                        span #{moment(article.date).format("Do MMM")}
+                      td
+                        span #{moment(article.date).format("HH:MM")}
 

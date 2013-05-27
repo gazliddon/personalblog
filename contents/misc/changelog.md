@@ -1,13 +1,14 @@
 ---
 title: Site Updates
-date: 2013-05-27 18:18
+date: 2013-05-27 19:36
 author: gaz
 tags: blog changes 
 template: article.jade
 ---
 
 ![changelog](/images/changelog.jpg) 
-### 2013-05-27 18:18
+### 2013-05-27 19:36
+* FIX: Archive page now workable
 * FIX : Added a first pass on responsive design for iPad / iPhone / mobile devices. It's not great, just drops the side bar and implemented pretty badly. Will do for now: [commit](https://github.com/gazliddon/personalblog/commit/1bed956176ab87ddbda8d0656fe380a21dca2863)
 * MERGE: Also merged in the work I'd been doing on some game stuff
 
