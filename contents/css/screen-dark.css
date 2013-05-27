@@ -36,6 +36,7 @@ iframe { margin-bottom:20px; }
     position: fixed;
 }
 
+/* What to do for a big screen */
 
 @media screen and (min-width:1025px)
 { 
@@ -57,6 +58,12 @@ iframe { margin-bottom:20px; }
    }
 
 }
+
+#content .centerme
+{
+    margin: 0 auto;
+}
+
 
 #services
 {
