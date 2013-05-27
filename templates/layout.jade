@@ -14,23 +14,23 @@ html(lang='en')
       meta(property="og:site_name", content=locals.name)
       meta(property="og:type", content="blog")
       meta(property="og:description", content=locals.description)
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
- 
       title
         block title
           = locals.name
   
-    link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
 
     script(src='/css/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.js')
 
     link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css', type='text/css', media='screen, projection')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css', type='text/css', media='screen, projection')
+    link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
 
     script(src='/google-code-prettify/run_prettify.js')
 
     script(src='/scripts/disquscommentcount.js')
-
 
     script(src='/lightview/js/spinners/spinners.min.js')
     script(src='/lightview/js/lightview/lightview.js')
