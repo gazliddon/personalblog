@@ -8,7 +8,7 @@ template: article.jade
 
 ![changelog](/images/changelog.jpg) 
 ### 2013-05-27 19:36
-* FIX: Archive page now workable
+* FIX: Archive page now workable: [commit](https://github.com/gazliddon/personalblog/commit/e744fd8ff748f7a5cd26a0cde545e7d9216acf47) 
 * FIX : Added a first pass on responsive design for iPad / iPhone / mobile devices. It's not great, just drops the side bar and implemented pretty badly. Will do for now: [commit](https://github.com/gazliddon/personalblog/commit/1bed956176ab87ddbda8d0656fe380a21dca2863)
 * MERGE: Also merged in the work I'd been doing on some game stuff
 
