@@ -5,7 +5,8 @@ CanvasApp = require('./canvasapp')
 Keys = require './keys'
 Bobs = require './bobs'
 
-SplodeSpawner = Bobs.SplodeSpawner
+SplodeSpawner = require('./splode').SplodeSpawner
+
 
 Col = require './col'
 ColorUtil = Col.ColorUtil
@@ -19,13 +20,9 @@ class ThisApp extends CanvasApp
 
     super _id
 
-  addBobs: (_bobArray) ->
-    @bobs = @bobs.concat _bobArray
-
   onClick: (e) ->
-    bang = new SplodeSpawner  e.offsetX,  e.offsetY, 3000, 10
+    bang = new SplodeSpawner  e.offsetX,  e.offsetY, 3000, 20
     @bobsManager.addBob bang
-    console.log @bobsManager
 
   clearScr: (_val) ->
     r = (Math.cos(_val)+1)/2
@@ -35,9 +32,10 @@ class ThisApp extends CanvasApp
     @canvas.clear z
 
   draw: ( _dt ) ->
-    @canvas.ctx.globalCompositeOperation = 'source-over'
+    @canvas.ctx.globalCompositeOperation = 'copy'
     @clearScr @time / 1000
     @canvas.ctx.globalCompositeOperation = 'lighter'
+
     @bobsManager.update Date.now()
     @bobsManager.draw @canvas
 
