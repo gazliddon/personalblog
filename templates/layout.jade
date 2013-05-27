@@ -19,13 +19,17 @@ html(lang='en')
         block title
           = locals.name
   
-    script(src='/google-code-prettify/run_prettify.js')
-
     link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
 
     script(src='/css/jquery.min.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/bootstrap/js/bootstrap.js')
+
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css', type='text/css', media='screen, projection')
+
+    script(src='/google-code-prettify/run_prettify.js')
+
     script(src='/scripts/disquscommentcount.js')
+
 
     script(src='/lightview/js/spinners/spinners.min.js')
     script(src='/lightview/js/lightview/lightview.js')
@@ -43,10 +47,10 @@ html(lang='en')
 
    #wrapper
       #contentwrapper
+        include sidebar
         block outercontent
           #content
             block content
               h2 Welcome to zombocom!
 
-        include sidebar
          
