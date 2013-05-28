@@ -8,7 +8,7 @@ Bobs = require './bobs'
 class SplodeBob extends Bobs.Bob
 
   constructor: ( @x, @y, @xv, @yv) ->
-    super  2000
+    super  1000
 
   doUpdate: ->
     @x += @xv
@@ -38,7 +38,7 @@ class SplodeSpawner extends Bobs.Bob
         @splodes = @splodes - 1
         @nextSplode += @interval
 
-        ret = _.map [0...80], =>
+        ret = _.map [0...20], =>
           xv = (Math.random() * 10) - 5
           yv = -((Math.random() * 20) + 3)
           @manager.addBob (new SplodeBob @x, @y, xv, yv)

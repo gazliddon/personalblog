@@ -7,6 +7,9 @@
     "wintersmith-coffee": "",
     "wintersmith-sass": "",
     "wintersmith-browserify": "0.1.2",
-    "wintersmith" : "1.2.4"
+    "wintersmith" : "1.2.4",
+    "iris" : "0.2.3"
   }
 }
+
+
