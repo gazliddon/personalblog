@@ -1,0 +1,20 @@
+{
+    "image" : "smallfont.png",
+    "name" : "smallfont",
+    "grabs" :
+    [
+	{
+	    "name" : "numbers",
+	    "startChar" : "0",  "charsToGrab" : 10,
+	    "width" : 9, "height" : 1,  "grabX" : 0, "grabY" : 0,
+	    "grabItemsWidth" : 10, "grabItemsHeight" : 1
+	},
+
+	{
+	    "name" : "caps",
+	    "startChar" : "A",  "charsToGrab" : 26,
+	    "width" : 9, "height" : 1,  "grabX" : 0, "grabY" : 0,
+	    "grabItemsWidth" : 10, "grabItemsHeight" : 1
+	}
+    ]
+}
