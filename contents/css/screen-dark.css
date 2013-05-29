@@ -12,65 +12,109 @@ iframe { margin-bottom:20px; }
 
 #contentwrapper {
     background: #1d1e1c;
-       width: 100%;
+    width: 100%;
 }
 
-#content {
-    padding-top: 30px;
-    width: 600px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-       margin: 0 auto;
-       float: none;
-}
-
-#nav {
-    display:none;
-    background: #3d3e3c;
-    padding-top: 30px;
-    float: left;
-    width: 250px;
-    height: 100%;
-    padding-left: 20px;
-    position: fixed;
-}
 
 /* What to do for a big screen */
-
 @media screen and (min-width:1025px)
 { 
-
    #contentwrapper
    {
        width: 970px;
    }
 
-   #nav
-   {
-       display: block;
+   #nav {
+       background: #3d3e3c;
+       padding-top: 30px;
+       float: left;
+       width: 250px;
+       height: 100%;
+       padding-left: 20px;
+       position: fixed;
    }
 
    #content
    {
+       padding-top: 30px;
+       width: 600px;
        float: left;
        margin-left: 270px;
+       padding-left: 50px;
+       padding-right: 50px;
+   }
+
+   #header
+   {
+       display: none;
+   }
+
+   #services
+   {
+       margin-top: 100px;
+       position: absolute;
+       bottom: 80px;
+   }
+}
+
+
+/* What to do for smaller screens */
+@media screen and (max-width:1024px)
+{ 
+  #wrapper
+  {
+      width: 100%;
+  }
+
+   #contentwrapper
+   {
+       width: 600px;
+       margin: 0 auto;
+   }
+
+   #nav
+   {
+       display:none;
+   }
+
+   #content
+   {
+       float: none;
+       padding: none;
+   }
+
+   #header
+   {
+       width: 600px;
+       margin: 0 auto;
+       display: block;
+       background-color: #3d3e3c;
+       margin-bottom: 2em;
+       padding-bottom: 2em;
+       
+   }
+   #header span
+   {
+       padding-left: 10px;
+       }
+
+   #services
+   {
+       display: inline;
+       float: right;
+       vertical-align: baseline;
    }
 
 }
+
+
+
 
 #content .centerme
 {
     margin: 0 auto;
 }
 
-
-#services
-{
-    margin-top: 100px;
-    position: absolute;
-    bottom: 80px;
-}
 
 
 
@@ -221,20 +265,6 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     text-align: justify;
     font-size: 0.96em;
 }
-
-
-#services div.group
-{
-}
-
-#services .icons
-{
-}
-
-#services .text
-{
-}
-
 
 #services .icons img
 {

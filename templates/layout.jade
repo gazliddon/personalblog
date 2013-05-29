@@ -1,6 +1,7 @@
 //- Include some mixins
 
 include tags
+include sidebar
 
 //- The page
 
@@ -48,7 +49,8 @@ html(lang='en')
 
    #wrapper
       #contentwrapper
-        include sidebar
+        mixin topbar()
+        mixin sidebar()
         block outercontent
           #content
             block content
