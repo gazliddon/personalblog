@@ -66,31 +66,37 @@ iframe { margin-bottom:20px; }
       width: 100%;
   }
 
+   #nav
+   {
+       display:none;
+   }
+
+
    #contentwrapper
    {
        width: 600px;
        margin: 0 auto;
    }
 
-   #nav
-   {
-       display:none;
-   }
-
    #content
    {
+       position:static;
+       margin-top:100px;
        float: none;
        padding: none;
+       z-index: 100;
    }
 
    #header
    {
+       top: 0;
+       position: fixed;
        width: 600px;
        margin: 0 auto;
        display: block;
        background-color: #3d3e3c;
-       margin-bottom: 2em;
-       padding-bottom: 2em;
+       margin-bottom: 1.5em;
+       
        
    }
    #header span
