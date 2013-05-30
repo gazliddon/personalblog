@@ -7,6 +7,18 @@ img:
 tags: coding
 ---
 
+
+## Dundee Library
+    * Working in the dundee library
+    * Neophile
+    * Like new things
+    * IBM study about painting walls
+    * Good deal, 40 quid a year
+    * No wifi access but have one of these
+	* Minor distractions
+	* Worst was a student
+
+
 ## Games Industry
 
 * Sony and the push to Indie
@@ -51,6 +63,13 @@ tags: coding
 	* Running example - once it's written down I don't reflect any more on the decision to run
 	* Reflection time generally means more time not to do something
 	* I only have to decide not to bother once :D Deferring or changing my mind on effort? Those decisions tend to stick
+
+
+####
+
+
+
+####
 
 ## Create
 * Best of pics
