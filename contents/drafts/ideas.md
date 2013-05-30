@@ -7,6 +7,35 @@ img:
 tags: coding
 ---
 
+## Games Industry
+
+* Sony and the push to Indie
+* Reminds me of Firebird
+* And Colin Fuidge
+    * Started the careers of loads of people including mine
+    * Give people a chance rather than find reasons not to do things
+	* Great curating instincts
+	* Knew what was RIGHT
+	* ATG is an excellent example
+	
+* Firebird very odd
+    * Run by the public purse
+    * Had to be sold because it made profit
+    * Never the intention to be a commercial organisation
+	* But was
+	* Included the Beyond Acquisition
+	* Key People
+    	* Paul Byrne
+		* Tony Beckwith
+		* Colin Fuidge
+		* Angela Sutherland
+		* Tony Rainbird
+		* Paul Hibbard
+		* Joe Bonar
+		* Graeme
+		* Adrian Curry
+		* Jane Cavanagh
+
 ## Technical
 * Component system
 * Coffee script
