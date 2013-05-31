@@ -6,7 +6,6 @@ class Component
 
   update: (_dt) ->
 
-
   getSibling: (_name) ->
     s = @parent.getSiblings _name
     s = s[0] if s
@@ -14,6 +13,12 @@ class Component
 
   isAlive: ->
     @alive
+
+  kill: ->
+    @alive = false
+    onDie()
+
+  onDie: ->
 
 
 class Entity extends Component
@@ -35,6 +40,9 @@ class Entity extends Component
 
     @components = _.filter @components, (_comp) ->
       _comp.isAlive()
+
+  onDie: ->
+    comp.kill() for comp in @components
 
   getSiblings: ( _name ) ->
     _.filter @components, (_v) ->

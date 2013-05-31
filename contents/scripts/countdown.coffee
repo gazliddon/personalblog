@@ -7,10 +7,9 @@ class Countdown extends Components.Component
 
   update: (_dt) ->
     @time += _dt
-    @callBack() if @time >= @duration
-
-  isAlive: ->
-    @alive = @time < @duration
+    if @time >= @duration
+      @callBack()
+      @kill()
 
 
 module.exports = Countdown
