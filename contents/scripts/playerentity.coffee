@@ -22,8 +22,7 @@ class BulletEntity extends Components.Entity
     @spr = @addComponent new Spr "spr", Globals.canvas, "posvel"
 
     @addComponent new Countdown "countdown", 1000, =>
-      # @alive = false
-      console.log "died!"
+      @kill()
 
 class Gun extends Components.Component
   constructor: (_name) ->

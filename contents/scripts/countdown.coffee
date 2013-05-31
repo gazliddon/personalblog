@@ -5,11 +5,10 @@ class Countdown extends Components.Component
     super _name
     @time = 0
 
-  update: (_dt) ->
+  update: (_dt ) ->
     @time += _dt
     if @time >= @duration
       @callBack()
-      @kill()
 
 
 module.exports = Countdown

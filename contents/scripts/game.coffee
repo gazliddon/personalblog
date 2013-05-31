@@ -18,6 +18,8 @@ KeyCodes = Keys.KeyCodes
 Util = require './util'
 Font = require './font'
 
+System = require './system'
+
 cyclingCol = (_val) ->
   r = (Math.cos(_val)+1)/2
   g = (Math.cos(_val * 2 + 0.1)+1)/2
@@ -35,7 +37,7 @@ class ThisApp extends CanvasApp
     @root.addComponent new PlayerEntity "player"
     console.log @root
 
-  draw: ( _dt ) ->
+  draw: ( _dt, _time ) ->
     @canvas.ctx.globalCompositeOperation = 'copy'
     @canvas.clear( cyclingCol @time / 1000)
     @canvas.ctx.globalCompositeOperation = 'lighter'

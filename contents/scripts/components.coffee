@@ -4,7 +4,7 @@ class Component
   constructor: (@name) ->
     @alive = true
 
-  update: (_dt) ->
+  update: (_dt ) ->
 
   getSibling: (_name) ->
     s = @parent.getSiblings _name
@@ -16,7 +16,7 @@ class Component
 
   kill: ->
     @alive = false
-    onDie()
+    @onDie()
 
   onDie: ->
 

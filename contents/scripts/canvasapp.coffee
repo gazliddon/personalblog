@@ -3,7 +3,10 @@ Canvas = require './canvas'
 
 class CanvasApp
   constructor: ( @canvasDivId ) ->
-    @lastTime = @startTime = Date.now()
+
+    @startTime = Date.now()
+    @lastTime = @time = 0
+
     @canvas = new Canvas @canvasDivId, 600, 450
 
     # Call draw @ 60hz
@@ -15,7 +18,8 @@ class CanvasApp
 
   baseDraw: ->
     @time = Date.now() - @startTime
-    @dt = @lastTime - @time
+    @dt = @time - @lastTime
+    @lastTime = @time
     @draw @dt
 
 

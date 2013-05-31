@@ -3,7 +3,8 @@
 Components = require './components'
 
 class Collide extends Components.Component
-  constructor: ->
+  constructor: (_name)  ->
+    super _name
     @x = 0
     @y = 0 
     @radius = 0
@@ -13,7 +14,8 @@ class Collide extends Components.Component
     destRadiusSquared = _obj.radius * _obj.radius
     radiusSquared = @radius * @radius
     distSquared - destRadiusSquared - radius >= 0
-    
+
+
 class CollisionManager
   constructor: ->
     @groups = {}
@@ -26,7 +28,9 @@ class CollisionManager
     _.filter @groups[_group], (_item) ->
         _item.isAlive() && _item.doesCollide _obj
       
-
   update: ->
 
+
+exports.Collide =          Collide
+exports.CollisionManager = CollisionManager
   
