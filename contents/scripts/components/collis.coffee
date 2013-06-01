@@ -1,6 +1,6 @@
 # Should only know about itself
   
-Components = require './components'
+Components = require '../components'
 
 class Collide extends Components.Component
   constructor: (_name)  ->

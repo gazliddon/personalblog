@@ -1,9 +1,10 @@
 # Player Entity
 
-Components =     require './components'
+Components =     require '../components'
+Globals =        require '../globals'
+
 Spr =            require './spr'
 ClampedPosVel =  require './clampedposvel'
-Globals =        require './globals'
 Countdown =      require './countdown'
 Pad =            require './pad'
 PlayerControl =  require './playercontrol'

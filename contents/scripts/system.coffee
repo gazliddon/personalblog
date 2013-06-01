@@ -1,5 +1,5 @@
 
-Collis = require './collis'
+Collis = require './components/collis'
 Components = require './components'
 
 class System extends Components.Entity

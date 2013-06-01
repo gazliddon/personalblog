@@ -1,6 +1,6 @@
-Components =     require './components'
+Components =     require '../components'
 
-Keys =           require './keys'
+Keys =           require '../keys'
 KeyCodes =       Keys.KeyCodes
 
 class Pad extends Components.Component

@@ -1,24 +1,15 @@
-_ = require 'underscore'
 
 CanvasApp = require './canvasapp' 
 Globals = require './globals'
-Components = require './components'
-PlayerEntity = require './playerentity'
-
-Bobs = require './bobs'
-SplodeSpawner = require('./splode').SplodeSpawner
-
 Col = require './col'
 ColorUtil = Col.ColorUtil
-
-Keys = require './keys'
-KeysManager = Keys.KeysManager
-KeyCodes = Keys.KeyCodes
-
-Util = require './util'
 Font = require './font'
-
 System = require './system'
+
+
+Components = require './components'
+PlayerEntity = require './components/playerentity'
+SplodeSpawner = require('./components/splode').SplodeSpawner
 
 cyclingCol = (_val) ->
   r = (Math.cos(_val)+1)/2
