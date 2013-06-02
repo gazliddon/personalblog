@@ -3,17 +3,22 @@
 Components = require '../components'
 
 class Collide extends Components.Component
-  constructor: (_name)  ->
+  constructor: (_name, @posComponent, @radius, @funce)  ->
     super _name
-    @x = 0
-    @y = 0 
-    @radius = 0
 
-  doesCollide: (_obj) ->
+  doesCollide: (_obj, @posComponent, @func) ->
     distSquared = (@x - _obj.x) * (@x - _obj.x) + (@y - _obj.y) * (@y - _obj.y)
     destRadiusSquared = _obj.radius * _obj.radius
     radiusSquared = @radius * @radius
     distSquared - destRadiusSquared - radius >= 0
+
+  update: (_dt) ->
+    pos = @getSibling @posComponent
+    @x = pos.x
+    @y = pos.y
+
+
+
 
 
 class CollisionManager

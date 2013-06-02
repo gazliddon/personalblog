@@ -1,29 +1,16 @@
 # Player Entity
 
-Components =     require '../components'
-Globals =        require '../globals'
-
-Spr =            require './spr'
-ClampedPosVel =  require './clampedposvel'
-Countdown =      require './countdown'
-Pad =            require './pad'
-PlayerControl =  require './playercontrol'
-
-
-PosVel =         require './posvel'
-
-class BulletEntity extends Components.Entity
-  constructor: (_name, _pvel) ->
-    super _name
-    @pvel = @addComponent new PosVel("posvel")
-    @pvel.setPos _pvel
-    @pvel.xv = 0
-    @pvel.yv = -5
-
-    @spr = @addComponent new Spr "spr", Globals.canvas, "posvel"
-
-    @addComponent new Countdown "countdown", 1000, =>
-      @kill()
+Components =       require '../components'
+Globals =          require '../globals'
+Spr =              require './spr'
+ClampedPosVel =    require './clampedposvel'
+Countdown =        require './countdown'
+Pad =              require './pad'
+PlayerControl =    require './playercontrol'
+collisionManager = Globals.collis
+Collide =          require './collis'
+PosVel =           require './posvel'
+BulletEntity =     require './bullet'
 
 class Gun extends Components.Component
   constructor: (_name) ->
@@ -33,7 +20,6 @@ class Gun extends Components.Component
 
   fire: (_pvel) ->
     b = @parent.addComponent( new BulletEntity "bullet", _pvel)
-
 
 class PlayerEntity extends Components.Entity
   constructor: (_name) ->
