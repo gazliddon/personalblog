@@ -3,7 +3,7 @@ title: Tasty & Cheap!
 template: article.jade
 author: gaz
 date: 2013-06-02 05:27
-img: 
+img: http://farm6.staticflickr.com/5456/8920182974_dda0ddb375_c.jpg
 tags: breakfast food
 ---
 <div class='middle'>
@@ -14,7 +14,9 @@ Wow, this was nice and a cheapo cut of meat, a skinned chicken thigh from a Tesc
 
 The salad was crispy leaves, baby spinach, raspberries, sliced jalapenos, torn up tomato then seasoned and tossed with MCT oil. And it was amaze. A little tasty oasis of early morning calm before Charlie's fifth birthday today.
 
+
 # Why Am I Embarrassed About The Cheapness?
+
 I am a bit but I don't know why. I don't know, I really can't tell the difference between that and more expensive cuts we used to buy. Maybe it's masked by the herbs and seasoning but the end net effect is something just as tasty as an organic cut costing double the price.
 
 A few months back we looked at our shopping bill and worked out what we could trim or change to what had become a major expense for the household. Suzey has done a brilliant job with this and we eat really well, probably better than we ever have. We throw less away than we ever have and buy a lot of value items rather than branded goods.
@@ -23,4 +25,4 @@ So win / win all around? It is and though it's mostly gone now I did spend a bit
 
 If you make something like Heinz Ketchup and the truth is that actually there's very little palpable difference between you and your competitors then you're in a commodity market and the only way to win in that is a price war, a place no one wants to be.
 
-So yeah, just a bit odd that a change in the way we feed ourself that is so utterly positive in anyway I can measure is also bound up with some irrational feelings lingering around the edges of shame and embarrassment. It almost feels like I'm being unfaithful to Colman's Mustard or Heinz Ketchup :D
+So yeah, just a bit odd that a change in the way we feed ourself that is so utterly positive in anyway I can measure is also bound up with some irrational feelings lingering around the edges of shame and embarrassment. It almost feels like I'm being unfaithful to Coleman's Mustard or Heinz Ketchup :D
