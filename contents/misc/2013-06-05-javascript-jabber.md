@@ -3,7 +3,7 @@ title: Javascript Jabber
 template: article.jade
 author: gaz
 date: 2013-06-05 15:21
-img: 
+img: http://zeropager.com/misc/img/baconjs.jpg
 tags: code javascript
 ---
 
