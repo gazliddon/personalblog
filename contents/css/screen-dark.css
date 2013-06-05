@@ -170,6 +170,14 @@ iframe { margin-bottom:20px; }
     margin-bottom: 1em;
 }
 
+#content .middle div
+{
+    display: table;
+    margin: 0 auto;
+    font-style:italic;
+}
+
+
 #header
 {
     padding-top: 1.90em;
