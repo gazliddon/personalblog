@@ -18,6 +18,6 @@ class Pad extends Components.Component
     @left = @keys.getKey(KeyCodes.KEY_LEFT).current
     @right = @keys.getKey(KeyCodes.KEY_RIGHT).current
     @fire = @keys.getKey(KeyCodes.KEY_FIRE).wentDown
-  
+
 
 module.exports = Pad
