@@ -1,5 +1,5 @@
 ---
-title: Javasctipt Jabber
+title: Javascript Jabber
 template: article.jade
 author: gaz
 date: 2013-06-05 15:21
