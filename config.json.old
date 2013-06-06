@@ -1,0 +1,16 @@
+{
+    "locals": {
+	"url": "http://www.zeropager.com",
+	"name": "Zero Pager",
+	"owner": "Gaz",
+	"description": "Blog of Gaz Liddon",
+	"index_articles": 10
+    },
+
+    "plugins":
+    [
+	"./node_modules/wintersmith-sass",
+	"./node_modules/wintersmith-coffee",
+	"./node_modules/wintersmith-browserify"
+    ]
+}

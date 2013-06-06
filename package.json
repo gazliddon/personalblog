@@ -1,15 +1,12 @@
 {
-  "name": "personalblog",
-  "version": "0.0.0",
-  "description": "personal blog ======== Sources for my personal blog",
-  "main": "index.js",
   "dependencies": {
-    "wintersmith-coffee": "",
-    "wintersmith-sass": "",
-    "wintersmith-browserify": "0.1.2",
-    "wintersmith" : "1.2.4",
-    "iris" : "0.2.3"
-  }
+    "iris" : "",
+    "wintersmith" : "2.x",
+    "wintersmith-browserify" : "",
+    "wintersmith-coffee" : "",
+    "moment": "2.x",
+    "underscore": "1.4.x",
+    "typogr": "0.5.x"
+  },
+  "repository": "none"
 }
-
-
