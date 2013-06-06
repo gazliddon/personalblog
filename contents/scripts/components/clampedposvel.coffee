@@ -1,6 +1,6 @@
 
-PosVel = require './posvel'
-Util =   require '../util'
+PosVel = require './posvel.coffee'
+Util =   require '../util.coffee'
 
 class ClampedPosVel extends PosVel
   constructor: (_name) ->

@@ -1,6 +1,6 @@
 
-Collis = require './components/collis'
-Components = require './components'
+Collis = require './components/collis.coffee'
+Components = require './components.coffee'
 
 class System extends Components.Entity
    constructor: (_name) ->

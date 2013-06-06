@@ -1,4 +1,4 @@
-Components = require '../components'
+Components = require '../components.coffee'
 
 class PosVel extends Components.Component
   constructor: (_name) ->

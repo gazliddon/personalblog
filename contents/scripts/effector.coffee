@@ -1,5 +1,5 @@
 
-Vec = require './vec'
+Vec = require './vec.coffee'
 Vec3 = Vec.Vec3
 # Private functions
 

@@ -2,8 +2,8 @@
 #
 _ = require 'underscore'
 
-Col = require '../col'
-Bobs = require '../bobs'
+Col = require '../col.coffee'
+Bobs = require '../bobs.coffee'
 
 class SplodeBob extends Bobs.Bob
 

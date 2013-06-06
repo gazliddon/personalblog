@@ -1,4 +1,4 @@
-Util = require './util'
+Util = require './util.coffee'
   
 class Vec2
     constructor: (@x = 0, @y = 0) ->

@@ -1,5 +1,5 @@
 
-Collis = require './components/collis'
+Collis = require './components/collis.coffee'
 CollisionManager = Collis.CollisionManager
 
 globals =

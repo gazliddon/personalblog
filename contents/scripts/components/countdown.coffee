@@ -1,4 +1,4 @@
-Components = require '../components'
+Components = require '../components.coffee'
 
 class Countdown extends Components.Component
   constructor: (_name, @duration, @callBack) ->

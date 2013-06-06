@@ -1,16 +1,16 @@
 # Player Entity
 
-Components =       require '../components'
-Globals =          require '../globals'
-Spr =              require './spr'
-ClampedPosVel =    require './clampedposvel'
-Countdown =        require './countdown'
-Pad =              require './pad'
-PlayerControl =    require './playercontrol'
+Components =       require '../components.coffee'
+Globals =          require '../globals.coffee'
+Spr =              require './spr.coffee'
+ClampedPosVel =    require './clampedposvel.coffee'
+Countdown =        require './countdown.coffee'
+Pad =              require './pad.coffee'
+PlayerControl =    require './playercontrol.coffee'
 collisionManager = Globals.collis
-Collide =          require './collis'
-PosVel =           require './posvel'
-BulletEntity =     require './bullet'
+Collide =          require './collis.coffee'
+PosVel =           require './posvel.coffee'
+BulletEntity =     require './bullet.coffee'
 
 class Gun extends Components.Component
   constructor: (_name) ->

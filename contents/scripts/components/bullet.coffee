@@ -1,13 +1,13 @@
-Globals = require '../globals'
-Components =       require '../components'
+Globals =        require '../globals.coffee'
+Components =     require '../components.coffee'
 
-PosVel =           require './posvel'
-Countdown = require './countdown'
-Collis =           require './collis'
-Collide =          Collis.Collide
+PosVel =         require './posvel.coffee'
+Countdown =      require './countdown.coffee'
+Collis =         require './collis.coffee'
+Collide =        Collis.Collide
 
 
-Spr =              require './spr'
+Spr =              require './spr.coffee'
 
 class BulletEntity extends Components.Entity
   constructor: (_name, _pvel) ->

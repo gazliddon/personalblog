@@ -1,5 +1,5 @@
 
-Components = require '../components'
+Components = require '../components.coffee'
 
 class Spr extends Components.Component
   constructor: (_name, @canvas, @posName) ->

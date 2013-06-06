@@ -1,4 +1,4 @@
-Util = require './util'
+Util = require './util.coffee'
 
 class ColorUtil
   @componentToHex: (c) ->

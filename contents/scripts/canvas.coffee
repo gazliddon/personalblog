@@ -1,6 +1,6 @@
 # Crappy canvas abstraction with some silly drawing stuff
 
-Keys = require './keys'
+Keys = require './keys.coffee'
 
 class Canvas
   constructor: (elemId, width, height) ->

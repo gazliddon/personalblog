@@ -2,9 +2,9 @@
 #
 _ = require 'underscore'
 
-Col = require './col'
+Col = require './col.coffee'
 ColorUtil = Col.ColorUtil
-Util = require './util'
+Util = require './util.coffee'
 
 # A bob
 # 

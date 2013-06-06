@@ -1,5 +1,5 @@
 # --------------------------------------------------------------------------------
-Canvas = require './canvas'
+Canvas = require './canvas.coffee'
 
 class CanvasApp
   constructor: ( @canvasDivId ) ->

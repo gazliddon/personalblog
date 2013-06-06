@@ -1,15 +1,15 @@
 
-CanvasApp = require './canvasapp' 
-Globals = require './globals'
-Col = require './col'
+CanvasApp = require './canvasapp.coffee' 
+Globals = require './globals.coffee'
+Col = require './col.coffee'
 ColorUtil = Col.ColorUtil
-Font = require './font'
-System = require './system'
+Font = require './font.coffee'
+System = require './system.coffee'
 
 
-Components = require './components'
-PlayerEntity = require './components/playerentity'
-SplodeSpawner = require('./components/splode').SplodeSpawner
+Components = require './components.coffee'
+PlayerEntity = require './components/playerentity.coffee'
+SplodeSpawner = require('./components/splode.coffee').SplodeSpawner
 
 cyclingCol = (_val) ->
   r = (Math.cos(_val)+1)/2
