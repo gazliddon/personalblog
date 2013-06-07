@@ -9,7 +9,6 @@ System = require './system.coffee'
 
 Components = require './components.coffee'
 PlayerEntity = require './components/playerentity.coffee'
-SplodeSpawner = require('./components/splode.coffee').SplodeSpawner
 
 cyclingCol = (_val) ->
   r = (Math.cos(_val)+1)/2
