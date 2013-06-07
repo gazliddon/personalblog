@@ -37,5 +37,5 @@ class SplodeSpawner2 extends Entity
       @kill()
 
 
-exports.SplodeSpawner = SplodeSpawner
+exports.SplodeSpawner = SplodeSpawner2
 
