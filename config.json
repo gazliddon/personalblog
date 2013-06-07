@@ -1,9 +1,9 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
-    "name": "The Wintersmith's blog",
-    "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "url": "http://zeropager.com",
+    "name": "Zero Pager",
+    "owner": "gaz liddon",
+    "description": "this that and the other"
   },
   "plugins": [
     "./plugins/paginator.coffee",

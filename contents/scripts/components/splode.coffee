@@ -2,6 +2,34 @@
 #
 _ = require 'underscore'
 
+
+Components = require '../components.coffee'
+Component = Components.Component
+Entity = Components.Entity
+
+class SplodeSpawner2 extends Entity
+  constructor: (_name, @x,@y,@xv, @yv) ->
+    super _name
+    @times = 5
+    @bobs = 100
+
+    @doBang()
+
+
+  update: (_dt) ->
+
+
+  doBang: ->
+    # Spawn some bobs
+    @times = @times -1
+    if @times > 0
+      console.log "Bang number x!"
+      @addComponent new Countdown "countdowner", 1000, =>
+        @doBang()
+    else
+      @kill()
+
+
 Col = require '../col.coffee'
 Bobs = require '../bobs.coffee'
 
