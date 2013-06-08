@@ -29,8 +29,8 @@ class ThisApp extends CanvasApp
 
   draw: ( _dt ) ->
     @canvas.ctx.globalCompositeOperation = 'copy'
-
-    @canvas.clear( '#000')
+    bgCol = @root.getComponent('/game/cyclers:rainbow').getColStr()
+    @canvas.clear( bgCol )
 
     @canvas.ctx.globalCompositeOperation = 'source-over'
 

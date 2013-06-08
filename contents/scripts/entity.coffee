@@ -61,11 +61,11 @@ class Entity extends Component
   getComponent: (_path) ->
     ret = null
 
-    compArray = _name.path(':')
+    compArray = _path.split(':')
 
     if compArray.length == 2
       comp = compArray[1]
-      ent = getEntity compArray[0]
+      ent = @getEntity compArray[0]
 
       if ent
         matches = _.filter ent.components, (_c) ->

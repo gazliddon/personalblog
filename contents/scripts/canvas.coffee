@@ -18,7 +18,7 @@ class Canvas
     @ctx.canvas.height = @height
 
     @ctx.fillStyle = "white";
-    @ctx.font = "bold 16px Arial";
+    @ctx.font = "16px Courier";
 
     @keys = new Keys.KeysManager id
 
