@@ -17,6 +17,9 @@ class Canvas
     @ctx.canvas.width = @width
     @ctx.canvas.height = @height
 
+    @ctx.fillStyle = "white";
+    @ctx.font = "bold 16px Arial";
+
     @keys = new Keys.KeysManager id
 
   box: (x,y,w,h, col) ->
@@ -26,6 +29,10 @@ class Canvas
   boxCentered: (x,y,w,h, col) ->
     box x - w/2, y - w/2, w, h, col
 
+  text: (_x,_y,_col, _text) ->
+    @ctx.fillStyle = _col
+    @ctx.fillText _text, _x, _y
+    
   circle: (_x, _y, _r, _col) ->
     @ctx.fillStyle = _col
     @ctx.beginPath()
