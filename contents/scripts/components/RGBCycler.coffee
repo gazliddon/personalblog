@@ -1,15 +1,18 @@
-Cycler = require './cycler.coffee'
+_ =             require 'underscore'
+Cycler =        require './cycler.coffee'
+CyclerHelpers = require '../cyclerhelpers.coffee'
 
 class RGBCycler extends Cycler
-  constructor: (_name, @getR, @getG, @getB) ->
+  constructor: (_name, @func) ->
     super _name
 
   getCol: ->
     [@r, @g, @b]
 
   update: (_dt) ->
-    @r = @getR _dt
-    @g = @getG _dt
-    @b = @getB _dt
+    @rgb = @func _dt / 1000
+    @r = @rgb[0]
+    @g = @rgb[1]
+    @b = @rgb[2]
 
 module.exports = RGBCycler

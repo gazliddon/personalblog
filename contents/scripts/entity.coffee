@@ -58,6 +58,21 @@ class Entity extends Component
     split = _name.split('/')
     entity = _.reduce split, func, @ 
 
-      
+  getComponent: (_path) ->
+    ret = null
+
+    compArray = _name.path(':')
+
+    if compArray.length == 2
+      comp = compArray[1]
+      ent = getEntity compArray[0]
+
+      if ent
+        matches = _.filter ent.components, (_c) ->
+          _c.name == comp
+        ret = matches[0] if matches.length > 0
+
+    ret
+
 module.exports = Entity
 

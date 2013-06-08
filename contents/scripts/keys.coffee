@@ -4,7 +4,7 @@ KeyCodes =
   KEY_UP:     38
   KEY_RIGHT:  39
   KEY_DOWN:   40
-  KEY_FIRE:  32
+  KEY_FIRE:   32
 
 class Key
   constructor: ->

@@ -13,7 +13,7 @@ class CyclerHelpers
   @cosFunc: (_dt) -> (Math.cos(_dt) + 1) / 2
   @sinFunc: (_dt) -> (Math.sin(_dt) + 1) / 2
   @sawFunc: (_dt) -> _dt - Math.floor _dt
-  @squareFunc: (_dt) -> if _dt - Math.floor _dt < 0.5 then 0 else 1
+  @squareFunc: (_dt) -> Math.floor( CyclerHelpers.sawFunc(_dt) + 0.5 )
 
 module.exports = CyclerHelpers
 
