@@ -1,6 +1,6 @@
-Components =     require '../components.coffee'
+Component =     require '../component.coffee'
 
-class PlayerControl extends Components.Component
+class PlayerControl extends Component
   constructor: (_name) ->
     super _name
 

@@ -1,9 +1,8 @@
-Components =     require '../components.coffee'
-
+Component =      require '../component.coffee'
 Keys =           require '../keys.coffee'
 KeyCodes =       Keys.KeyCodes
 
-class Pad extends Components.Component
+class Pad extends Component
   constructor: (_name, @keys) ->
     super _name
     @left = false

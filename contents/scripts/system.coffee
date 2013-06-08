@@ -1,8 +1,8 @@
 
 Collis = require './components/collis.coffee'
-Components = require './components.coffee'
+Entity = require './entity.coffee'
 
-class System extends Components.Entity
+class System extends Entity
    constructor: (_name) ->
     super _name
     @addComponent new CollisionManager

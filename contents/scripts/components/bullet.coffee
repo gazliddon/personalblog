@@ -1,15 +1,19 @@
 Globals =        require '../globals.coffee'
-Components =     require '../components.coffee'
+Component =      require '../component.coffee'
+Entity =         require '../entity.coffee'
 
 PosVel =         require './posvel.coffee'
 Countdown =      require './countdown.coffee'
 Collis =         require './collis.coffee'
 Collide =        Collis.Collide
 
+Splode = require './splode.coffee'
+SplodeSpawner2 = Splode.SplodeSpawner2
+
 
 Spr =              require './spr.coffee'
 
-class BulletEntity extends Components.Entity
+class BulletEntity extends Entity
   constructor: (_name, _pvel) ->
     super _name
     @pvel = @addComponent new PosVel("posvel")

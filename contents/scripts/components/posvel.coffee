@@ -1,6 +1,6 @@
-Components = require '../components.coffee'
+Component = require '../component.coffee'
 
-class PosVel extends Components.Component
+class PosVel extends Component
   constructor: (_name) ->
     super _name
     @x = 0

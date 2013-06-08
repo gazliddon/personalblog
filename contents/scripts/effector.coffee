@@ -33,6 +33,4 @@ class Effector
   isEffected: (_pos) ->
     true
 
-
-
 exports.Effector = Effector

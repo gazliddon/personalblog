@@ -1,14 +1,16 @@
 
-CanvasApp = require './canvasapp.coffee' 
-Globals = require './globals.coffee'
-Col = require './col.coffee'
-ColorUtil = Col.ColorUtil
-Font = require './font.coffee'
-System = require './system.coffee'
+CanvasApp =    require './canvasapp.coffee' 
+Globals =      require './globals.coffee'
+Col =          require './col.coffee'
+ColorUtil =    Col.ColorUtil
+Font =         require './font.coffee'
+System =       require './system.coffee'
 
 
-Components = require './components.coffee'
+Component =    require './component.coffee'
+Entity =       require './entity.coffee'
 PlayerEntity = require './components/playerentity.coffee'
+
 
 cyclingCol = (_val) ->
   r = (Math.cos(_val)+1)/2
@@ -17,13 +19,14 @@ cyclingCol = (_val) ->
   ColorUtil.rgbFloatToHex r,g,b
 
 
+
 class ThisApp extends CanvasApp
   constructor: (_id) ->
     super _id
 
     Globals.canvas = @canvas
 
-    @root = new Components.Entity "root"
+    @root = new Entity "root"
     @root.addComponent new PlayerEntity "player"
     console.log @root
 

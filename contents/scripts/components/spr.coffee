@@ -1,7 +1,7 @@
 
-Components = require '../components.coffee'
+Component = require '../component.coffee'
 
-class Spr extends Components.Component
+class Spr extends Component
   constructor: (_name, @canvas, @posName) ->
     super _name
     @rot = 0

@@ -1,25 +1,6 @@
 _ = require 'underscore'
 
-class Component
-  constructor: (@name) ->
-    @alive = true
-
-  update: (_dt ) ->
-
-  getSibling: (_name) ->
-    s = @parent.getSiblings _name
-    s = s[0] if s
-    s
-
-  isAlive: ->
-    @alive
-
-  kill: ->
-    @alive = false
-    @onDie()
-
-  onDie: ->
-
+Component = require './component.coffee'
 
 class Entity extends Component
   constructor: (_name) ->
@@ -48,8 +29,4 @@ class Entity extends Component
     _.filter @components, (_v) ->
       _name == _v.name
       
-# Exports
-
-exports.Component = Component
-exports.Entity = Entity
-
+module.exports = Entity

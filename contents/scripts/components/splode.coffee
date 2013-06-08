@@ -1,14 +1,8 @@
 # A bob is an object
 #
-_ =              require 'underscore'
-
-Components =     require '../components.coffee'
-Component =      Components.Component
-Entity =         Components.Entity
-
+Entity =         require '../entity.coffee'
 PosVel =         require './posvel.coffee'
 Spr =            require './spr.coffee'
-
 
 class SplodeEntity2 extends Entity
   constructor: (_name, @x, @y, @xv, @yv) ->

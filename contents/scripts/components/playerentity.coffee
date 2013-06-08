@@ -1,6 +1,7 @@
 # Player Entity
 
-Components =       require '../components.coffee'
+Component =        require '../component.coffee'
+Entity =           require '../entity.coffee'
 Globals =          require '../globals.coffee'
 Spr =              require './spr.coffee'
 ClampedPosVel =    require './clampedposvel.coffee'
@@ -12,7 +13,7 @@ Collide =          require './collis.coffee'
 PosVel =           require './posvel.coffee'
 BulletEntity =     require './bullet.coffee'
 
-class Gun extends Components.Component
+class Gun extends Component
   constructor: (_name) ->
     super _name
 
@@ -21,7 +22,7 @@ class Gun extends Components.Component
   fire: (_pvel) ->
     b = @parent.addComponent( new BulletEntity "bullet", _pvel)
 
-class PlayerEntity extends Components.Entity
+class PlayerEntity extends Entity
   constructor: (_name) ->
     super _name
 

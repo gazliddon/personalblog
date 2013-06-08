@@ -1,8 +1,8 @@
 # Should only know about itself
   
-Components = require '../components.coffee'
+Component = require '../component.coffee'
 
-class Collide extends Components.Component
+class Collide extends Component
   constructor: (_name, @posComponent, @radius, @funce)  ->
     super _name
 
@@ -18,9 +18,6 @@ class Collide extends Components.Component
     @y = pos.y
 
 
-
-
-
 class CollisionManager
   constructor: ->
     @groups = {}
@@ -34,7 +31,6 @@ class CollisionManager
         _item.isAlive() && _item.doesCollide _obj
       
   update: ->
-
 
 exports.Collide =          Collide
 exports.CollisionManager = CollisionManager
