@@ -6,11 +6,9 @@ ColorUtil =    Col.ColorUtil
 Font =         require './font.coffee'
 System =       require './system.coffee'
 
-
 Component =    require './component.coffee'
 Entity =       require './entity.coffee'
 PlayerEntity = require './components/playerentity.coffee'
-
 
 cyclingCol = (_val) ->
   r = (Math.cos(_val)+1)/2
@@ -18,6 +16,12 @@ cyclingCol = (_val) ->
   b = (Math.cos(_val * 0.5 + 0.11)+1)/2
   ColorUtil.rgbFloatToHex r,g,b
 
+
+CyclerHelpers = require './cyclerhelpers.coffee'
+RGBCycler =     require './components/RGBCycler.coffee'
+fastCos = CyclerHelpers.makeFunc 0,1,10,0.5, CyclerHelpers.cosFunc
+one = CyclerHelpers.constant 1
+fastRed = new RGBCycler "fastred", fastCos, one, one
 
 
 class ThisApp extends CanvasApp
@@ -27,8 +31,14 @@ class ThisApp extends CanvasApp
     Globals.canvas = @canvas
 
     @root = new Entity "root"
-    @root.addComponent new PlayerEntity "player"
-    console.log @root
+
+    @systemFolder = @root.addEntity "system"
+    @gameFolder = @root.addEntity "game"
+
+    @gameFolder.addEntity "objs"
+    @gameFolder.addEntity "cyclers"
+    @gameFolder.addComponent new PlayerEntity "player"
+
 
   draw: ( _dt, _time ) ->
     @canvas.ctx.globalCompositeOperation = 'copy'
@@ -46,8 +56,7 @@ $ ->
       .timeout(10)
       .ok (_data) ->
         x = eval "(" + _data + ")"
-        console.log x
-
+ 
   console.log "waiting req"
   
   new ThisApp "#playfield"

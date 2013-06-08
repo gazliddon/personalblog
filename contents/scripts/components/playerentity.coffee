@@ -8,6 +8,7 @@ ClampedPosVel =    require './clampedposvel.coffee'
 Countdown =        require './countdown.coffee'
 Pad =              require './pad.coffee'
 PlayerControl =    require './playercontrol.coffee'
+
 collisionManager = Globals.collis
 Collide =          require './collis.coffee'
 PosVel =           require './posvel.coffee'
