@@ -84,12 +84,17 @@ draw = (_canvas, _cyclers) ->
   width = 5
 
   func = (_cycler, _index) =>
+  
     x =  _index % width;  y =  Math.floor _index / width
     x = x * spacingX + oX;  y = y * spacingY + oY
-    _canvas.circle x, y, blockW / 2, _cycler.getColStr()
+
+    r = blockW /2
+
+    _canvas.circle x, y, r, _cycler.getColStr()
     _canvas.text x,y,'#fff', _cycler.name
 
   func cycler,index for cycler,index in _cyclers
 
 exports.draw = draw
 exports.init = init
+

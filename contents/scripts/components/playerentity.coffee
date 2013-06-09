@@ -21,7 +21,8 @@ class Gun extends Component
   update: (_dt) ->
 
   fire: (_pvel) ->
-    b = @parent.addComponent( new BulletEntity "bullet", _pvel)
+    rbow = @parent.getComponent('/game/cyclers:rainbow').getColStr()
+    b = @parent.addComponent( new BulletEntity "bullet", _pvel, rbow)
 
 class PlayerEntity extends Entity
   constructor: (_name) ->
