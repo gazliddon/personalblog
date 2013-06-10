@@ -9,7 +9,7 @@ tags: flight
 
 <div class='middle'>
 <img src='./img/stewartlee.jpg'>
-<div> caption </div>
+<div>Is This Stewart Lee?</div>
 </div>
 
 Man, there's a guy 3 rows down from the me and I think it might be Stuart lee. I mean the back of his head looks really familiar and I've managed to catch a glimpse of him in profile and there's nothing suggesting it isn't Stuart Lee.
