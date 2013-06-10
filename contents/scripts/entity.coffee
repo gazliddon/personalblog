@@ -15,7 +15,7 @@ class Entity extends Component
   entityUpdate: (_dt) ->
     func = (_comp) ->
       _comp.entityUpdate _dt if _comp.entityUpdate
-      _comp.update _dt
+      _comp.baseUpdate _dt
       
     func _comp for _comp in @components
 

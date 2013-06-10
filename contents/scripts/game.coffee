@@ -29,13 +29,12 @@ class ThisApp extends CanvasApp
 
   draw: ( _dt ) ->
     @canvas.ctx.globalCompositeOperation = 'copy'
-    bgCol = @root.getComponent('/game/cyclers:rainbow').getColStr()
-    @canvas.clear( bgCol )
+    @canvas.clear( 'black' )
 
     @canvas.ctx.globalCompositeOperation = 'source-over'
 
-    @root.entityUpdate @time
-    GameCyclers.draw(@canvas, @root.getEntity('/game/cyclers').components)
+    @root.entityUpdate Date.now()
+#    GameCyclers.draw(@canvas, @root.getEntity('/game/cyclers').components)
 
 $ ->
   new ThisApp "#playfield"

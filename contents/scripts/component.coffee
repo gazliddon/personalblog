@@ -1,6 +1,9 @@
+
 class Component
   constructor: (@name) ->
     @alive = true
+    @startTime = @lastTime = Date.now()
+    @myTime = 0
 
   update: (_dt ) ->
 
@@ -12,6 +15,12 @@ class Component
   isAlive: ->
     @alive
 
+  baseUpdate: (_dt) ->
+    @myTime = _dt - @startTime
+    @deltaTime = _dt - @lastTime
+    @update _dt
+    @lastTime = _dt
+
   kill: ->
     @alive = false
     @onDie()
@@ -19,5 +28,5 @@ class Component
   onDie: ->
 
 
-  module.exports = Component
+module.exports = Component
 

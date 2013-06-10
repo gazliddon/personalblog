@@ -14,7 +14,7 @@ SplodeSpawner2 = Splode.SplodeSpawner2
 Spr =              require './spr.coffee'
 
 class BulletEntity extends Entity
-  constructor: (_name, _pvel) ->
+  constructor: (_name, _pvel, _col) ->
     super _name
     @pvel = @addComponent new PosVel("posvel")
     @pvel.setPos _pvel
@@ -22,6 +22,7 @@ class BulletEntity extends Entity
     @pvel.yv = -5
 
     @spr = @addComponent new Spr "spr", Globals.canvas, "posvel"
+    @spr.col = _col
 
     @addComponent new Collide "collide", "posvel", 10, ->
       console.log "collided!"
