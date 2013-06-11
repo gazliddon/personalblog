@@ -21,7 +21,6 @@ This is probably one of the best podcasts I have ever listened to, a brilliant a
 
 The page to download it is here or you can stream it below:
 
-<script src="http://audio.thisamericanlife.org/widget/widget.min.js" type="text/javascript"></script>
-<div id="this-american-life-496" class="this-american-life" style="margin: 0 auto; width:510px; background: #eee; margin-bottom: 1em"></div>
+http://www.thisamericanlife.org/radio-archives/episode/496/when-patents-attack-part-two
 
 Yep, it kind of revolves around technical issues but you don't need to understand all of that, this is a brilliant detective story with greed at it's core. Utterly fascinating. You really should listen to it.
