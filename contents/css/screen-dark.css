@@ -175,6 +175,8 @@ iframe { margin-bottom:20px; }
     display: table;
     margin: 0 auto;
     font-style:italic;
+    font-size: 80%;
+    padding-bottom: 1em;
 }
 
 
