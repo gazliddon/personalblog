@@ -38,8 +38,6 @@ class KeysManager
     # on and fix right now - GRL
 
     @attachObj = $('body')
-
-    console.log @attachObj
     
     @attachObj.blur =>
       @lostFocus()
