@@ -1,5 +1,5 @@
 
-Component = require '../component.coffee'
+Component = require './component.coffee'
 
 Col = require '../col.coffee'
 ColorUtil = Col.ColorUtil

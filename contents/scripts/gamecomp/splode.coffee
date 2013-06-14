@@ -1,19 +1,20 @@
-# A bob is an object
-#
-Entity =         require '../entity.coffee'
-PosVel =         require './posvel.coffee'
-Spr =            require './spr.coffee'
+# Components
+PosVel =      require '../components/posvel.coffee'
+Spr =         require '../components/spr.coffee'
+CountDown =   require '../components/countdown.coffee'
 
-class SplodeEntity2 extends Entity
+# Game Components
+GameEntity =  require './gameentity.coffee'
+
+class SplodeEntity extends GameEntity
   constructor: (_name, @x, @y, @xv, @yv) ->
     super _name
     @addComponent new PosVel "posvel", @x,@y,@xv,@yz
-    @addComponent new Spr "spr", Globals.canvas, "posvel"
+    @addComponent new Spr "spr", @system.canvas, "posvel"
     @addComponent new Countdown "countdowner", 1000, =>
       @kill()
 
-class SplodeSpawner2 extends Entity
-
+class SplodeSpawner extends GameEntity
   constructor: (_name, @x,@y,@xv, @yv) ->
     super _name
     @times = 5
@@ -30,6 +31,5 @@ class SplodeSpawner2 extends Entity
     else
       @kill()
 
-
-exports.SplodeSpawner = SplodeSpawner2
+exports.SplodeSpawner = SplodeSpawner
 

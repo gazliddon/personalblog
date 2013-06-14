@@ -1,5 +1,7 @@
 _ =             require 'underscore'
+
 Cycler =        require './cycler.coffee'
+
 CyclerHelpers = require '../cyclerhelpers.coffee'
 
 class RGBCycler extends Cycler

@@ -1,4 +1,5 @@
-Component =      require '../component.coffee'
+Component =      require './component.coffee'
+
 Keys =           require '../keys.coffee'
 KeyCodes =       Keys.KeyCodes
 

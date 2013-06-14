@@ -6,7 +6,7 @@ class Entity extends Component
   constructor: (_name) ->
     super _name
     @components = []
-
+  
   addComponent: (_comp) ->
     _comp.parent = @
     @components.push _comp
@@ -29,12 +29,12 @@ class Entity extends Component
     _.filter @components, (_v) ->
       _name == _v.name
 
-  getChildren: (_type, _name) ->
+  getChildren: (_func) ->
     _.filter @components, (_v) ->
-        _name == _v.name && (_v instanceof _type)
+        _func
 
-  getChild: (_type, _name) ->
-    arr = @getChildren _type, _name
+  getChild: (_func) ->
+    arr = @getChildren _func
     switch arr.length
       when 0 then null
       else arr[0]
@@ -53,10 +53,10 @@ class Entity extends Component
       if _memo
         switch _item
           when "" then _memo.getRoot()
-          else _memo.getChild Entity, _item
+          else _memo.getChild (_c) ->
+            _c.hasChildren() && _c.name == _item
 
-    split = _name.split('/')
-    entity = _.reduce split, func, @ 
+    entity = _.reduce _name.split('/'), func, @ 
 
   getComponent: (_path) ->
     ret = null

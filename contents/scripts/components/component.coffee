@@ -4,6 +4,7 @@ class Component
     @alive = true
     @startTime = @lastTime = Date.now()
     @myTime = 0
+    @components = null
 
   update: (_dt ) ->
 
@@ -14,6 +15,9 @@ class Component
 
   isAlive: ->
     @alive
+
+  hasChildren: ->
+    return @components != null
 
   baseUpdate: (_dt) ->
     @myTime = _dt - @startTime
@@ -26,7 +30,6 @@ class Component
     @onDie()
 
   onDie: ->
-
 
 module.exports = Component
 
