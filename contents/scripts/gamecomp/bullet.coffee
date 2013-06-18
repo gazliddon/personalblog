@@ -1,7 +1,7 @@
 # Components
 PosVel =         require '../components/posvel.coffee'
 Countdown =      require '../components/countdown.coffee'
-Collide =         require '../components/collide.coffee'
+Collide =        require '../components/collide.coffee'
 Spr =            require '../components/spr.coffee'
 
 # Game Components
@@ -21,8 +21,9 @@ class BulletEntity extends GameEntity
     @spr = @addComponent new Spr "spr", @system.canvas, "posvel"
     @spr.col = _col
 
-    @addComponent new Collide "collide", "posvel", 10, ->
+    @system.collis.addComponent(new Collide "bullet", "posvel", 10, => 
       console.log "collided!"
+    )
 
     @addComponent new Countdown "countdown", 1000, =>
       @kill()

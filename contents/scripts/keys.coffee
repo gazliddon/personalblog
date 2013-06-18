@@ -27,7 +27,6 @@ class Key
 class KeysManager
 
   constructor: ( @id ) ->
-    console.log "Constructed Keys"
     @keymap = {}
 
     @attachObj = $(@id)

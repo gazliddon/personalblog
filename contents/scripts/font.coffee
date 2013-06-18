@@ -25,8 +25,6 @@ class Font
     func = (memo, v) -> _.extend memo, grabToPrintInfoHash v
     @letterToInfo = _.reduce @init.grabs, func, {}
 
-    console.log @letterToInfo
-
   print: ( _char ) ->
     letter = @letterToInfo[_char]
     if letter

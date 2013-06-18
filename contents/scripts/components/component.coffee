@@ -16,7 +16,7 @@ class Component
   isAlive: ->
     @alive
 
-  hasChildren: ->
+  hasComponents: ->
     return @components != null
 
   baseUpdate: (_dt) ->

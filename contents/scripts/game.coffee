@@ -35,6 +35,7 @@ class GameSystem extends System
 
     @gameFolder = @root.addEntity "game"
     @gameFolder.addEntity "objs"
+
     GameCyclers.init @gameFolder.addEntity "cyclers"
     @gameFolder.addComponent new PlayerEntity "player"
 
@@ -60,9 +61,7 @@ class ThisApp extends CanvasApp
 # ------------------------------------------------------------------------
 
 $ ->
-  console.log "constructing"
-  window.poo = new ThisApp "#playfield"
-  console.log "constructed"
+  window.game = new ThisApp "#playfield"
 
 
 # ------------------------------------------------------------------------

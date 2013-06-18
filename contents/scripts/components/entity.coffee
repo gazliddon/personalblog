@@ -30,14 +30,11 @@ class Entity extends Component
       _name == _v.name
 
   getChildren: (_func) ->
-    _.filter @components, (_v) ->
-        _func
+    _.filter @components, _func
 
   getChild: (_func) ->
     arr = @getChildren _func
-    switch arr.length
-      when 0 then null
-      else arr[0]
+    if arr.length == 0 then null else arr[0]
 
   # Traverse up the hierachy to find the root node
   getRoot: ->
@@ -54,9 +51,10 @@ class Entity extends Component
         switch _item
           when "" then _memo.getRoot()
           else _memo.getChild (_c) ->
-            _c.hasChildren() && _c.name == _item
+            _c.hasComponents() && _c.name == _item
 
-    entity = _.reduce _name.split('/'), func, @ 
+    entity = _.reduce _name.split('/'), func, @
+    entity
 
   getComponent: (_path) ->
     ret = null
