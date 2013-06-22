@@ -7,7 +7,7 @@ img: http://www.zeropager.com/misc/img/grangeroad.jpg
 tags: running
 ---
 [leaders]: http://app.strava.com/segments/3237682
-[racesforlife]: http://www.raceforlifesponsorme.org/your-pace-or-mine
+[raceforlife]: http://www.raceforlifesponsorme.org/your-pace-or-mine
 [strava]: http://app.strava.com/activities/62013012
 [grange]: http://app.strava.com/activities/62013012/segments/1165709992
 
