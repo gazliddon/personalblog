@@ -19,8 +19,10 @@ tags: running
 
 Wow. [Great run][strava]. Not been out for four days. Despite a pretty hilly course managed just under 5km with an average of 5:22 km per min. Yes it's slow but I'm consistently getting under 5:30 m/km for these hilly runs now. Which is great. And today delivered my fastest up [Grange Road Hill][grange].
 
-Let me be blunt. Grange Road is a twat. You've 45 meter 1 km climb and it's always at the end of a run. Or a cycle home. Not my favourite. Today I took around 10 seconds off my best time for a 5m 47s time :D V happy with that. Man when I started running the very idea of doing a kilometre on a flat course in that time was ludicrous. So I'm number 5 in the overall [leaderboard][leaders] now and a little gutted not being 2 seconds faster and getting to number 4 :D Damn you Craig Beattie! I'll get there though.
+Let me be blunt. Grange Road is a twat. You've a 45 meter 1 km climb to do that always seems to be at the end of a run. Or a cycle home. So yeah, it's not my favourite but today saw 10 seconds shaved off my best time and it got me to 5m 47s :D
 
-Another 5km tonight, a slow one down the front though. My calf are kicking up a stink. Also very much looking forward to [Mrs Zerpopager's 5km Race For Life tomorrow][raceforlife]. Going to be a full weekend :D
+V happy with that. Man when I started running the very idea of even doing a kilometre on the flat in five minutes something was ludicrous. So now it's number 5 in the overall [leaderboard][leaders] though ever so slightly gutted at not being 2 seconds faster for a #4 spot :D Damn you Craig Beattie! I'll get there though.
+
+Another 5km tonight, a slow one down the front. I got a calf are kicking up a stink. Also very much looking forward to [Mrs Zerpopager's 5km Race For Life tomorrow][raceforlife]. Going to be a full weekend :D
 
 
