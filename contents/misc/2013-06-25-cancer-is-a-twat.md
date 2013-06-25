@@ -3,11 +3,11 @@ title: Cancer Is A Twat
 template: article.jade
 author: gaz
 date: 2013-06-25 14:23
-img: 
-tags: tags
+img: http://farm8.staticflickr.com/7434/9116304961_2f7522ae94_z.jpg
+tags: weekend running cancer twat
 ---
 
-Hey! Great weekend all in all. I'm late to blogging it but there you go. Suzey and her excellent chums Sammy Thomson and Angela Bisset took part in the Race For Life at Camperdown Park on Sunday. They all completed 5km and did brilliant, raising > £200 to give cancer a rightly deserved kick in the cobblers. Less chat more pics. Here's a load:
+Hey! Great weekend all in all. I'm late to blogging it but there you go. Suzey and her excellent chums Sammy Thomson and Angela Bisset took part in the Race For Life at Camperdown Park on Sunday. They all completed 5km and did brilliant, raising > £200 to give cancer a rightly deserved kick in the cobblers. Less chat more pics. There's a load below and you can find [the entire set linked right here](http://www.flickr.com/photos/gyratory/sets/72157634286617440/)
 
 <div class='middle'>
 
