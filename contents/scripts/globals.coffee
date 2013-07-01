@@ -1,6 +1,0 @@
-globals =
-  
-
-
-
-module.exports = globals
