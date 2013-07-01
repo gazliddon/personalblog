@@ -1,18 +1,18 @@
 Component = require '../components/component.coffee'
 
-sSystem = null
+globals = exports ? window
 
 class GameComponent extends Component
 
   @init: (_system) ->
-    sSystem = _system
+    globals.gameSystem = _system
 
   @getSystem: ->
-    sSystem
+    globals.gameSystem
 
   constructor: (_name) ->
     super _name
-    @system = sSystem
+    @system = globals.gameSystem
 
 
 module.exports = GameComponent

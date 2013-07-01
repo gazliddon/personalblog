@@ -13,12 +13,26 @@ GameCyclers =  require './gamecyclers.coffee'
 CollisionManager = require './components/collisionmanager.coffee'
 Entity =           require './components/entity.coffee'
 System =           require './components/system.coffee'
+Countdown =        require './components/countdown.coffee'
 
 # ------------------------------------------------------------------------
 # Game Components
 PlayerEntity =     require './gamecomp/playerentity.coffee'
 GameComponent =    require './gamecomp/gamecomponent.coffee'
 GameEntity =       require './gamecomp/gameentity.coffee'
+
+class GameLevel extends GameEntity
+
+  constructor: (_name) ->
+    super _name
+
+  @addComponent new PlayerEntity "player"
+
+  @addComponent new Countdown "counter", 1000, =>
+    console.log "poo"
+ 
+  update: (_dt) ->
+
 
 class GameSystem extends System
 
@@ -35,9 +49,13 @@ class GameSystem extends System
 
     @gameFolder = @root.addEntity "game"
     @gameFolder.addEntity "objs"
+    @gameFolder.addComponent new GameLevel "thelevel"
 
     GameCyclers.init @gameFolder.addEntity "cyclers"
-    @gameFolder.addComponent new PlayerEntity "player"
+
+
+
+
 
 # ------------------------------------------------------------------------
 class ThisApp extends CanvasApp
