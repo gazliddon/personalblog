@@ -9,4 +9,4 @@
 - var files = contents['misc']._.pages
 
 //- get the union and sort by negative date and then return first five :)
-- var articles  =  _(_.sortBy( _.union(dirs, files), function(item) { return -item.date })).first(5)
+- var articles = _.chain(_.union(dirs, files)).sortBy(function(item) { return -item.date }).first(5).value()
