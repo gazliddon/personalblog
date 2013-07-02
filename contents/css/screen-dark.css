@@ -351,3 +351,11 @@ div#content .commentcount a
   pre .atn, code .atn { color: #404 }
   pre .atv, code .atv { color: #060 }
 }
+
+code {
+    color: #333;
+    background-color: #eea;
+    font-weight: bold;
+    border: none;
+    font-size: 105%;
+}
