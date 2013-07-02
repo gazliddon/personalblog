@@ -23,6 +23,12 @@ Some CSS-fu there to make sure you don't miss it eh? So now the pics:
 
 <img src='http://farm8.staticflickr.com/7369/9116275089_37f379174c_b.jpg'>
 
+</div>
+
+<span class="more"></span>
+
+<div class='middle'>
+
 <img src='http://farm3.staticflickr.com/2820/9116250747_8b83671607_z.jpg'>
 
 <img src='http://farm6.staticflickr.com/5521/9118471086_55e7649609_o.jpg'>
