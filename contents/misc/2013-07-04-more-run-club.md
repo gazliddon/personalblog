@@ -1,5 +1,5 @@
 ---
-title: Yet More Run Clib 
+title: Yet More Run Club 
 template: article.jade
 author: gaz
 date: 2013-07-04 11:19
