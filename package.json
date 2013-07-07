@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "iris" : "",
+    "wintersmith-sass" : "",
     "wintersmith" : "2.x",
     "wintersmith-browserify" : "",
     "wintersmith-coffee" : "",

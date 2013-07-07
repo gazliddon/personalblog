@@ -1,0 +1,423 @@
+$bgcol: #1d1e1c;
+
+$textcol: #c9cecc;
+$linkcol: #c9cecc;
+$strongcol: rgb(165, 118, 118);
+
+$navbgcol: #3d3e3c;
+
+html {
+    height:100%;
+}
+
+body {
+    background:#1d1e1c;
+    height: 100%;
+    color: #c9cecc;
+    font-family: "Open sans", sans-serif;
+    font-size: 11pt;
+}
+
+a {
+    text-decoration:none;
+    color: #c9cecc;
+}
+
+strong {
+    font-weight:bold !important;
+    color: rgb(165, 118, 118) !important;
+}
+
+strong a {
+    color:#7aF !important;
+}
+
+em {
+    font-style:italic;
+}
+
+iframe {
+    margin-bottom:20px;
+}
+
+
+#wrapper {
+    height:100%;
+}
+
+#contentwrapper {
+    background: #1d1e1c;
+    width: 100%;
+}
+
+
+/* What to do for a big screen */
+@media screen and (min-width:1025px) { 
+    #contentwrapper {
+	width: 970px;
+    }
+
+    #nav {
+	background: #3d3e3c;
+	padding-top: 30px;
+	float: left;
+	width: 250px;
+	height: 100%;
+	padding-left: 20px;
+	position: fixed;
+    }
+
+    #content  {
+	padding-top: 30px;
+	width: 600px;
+	float: left;
+	margin-left: 270px;
+	padding-left: 50px;
+	padding-right: 50px;
+    }
+
+    #header  {
+	display: none;
+    }
+
+    #services  {
+	margin-top: 100px;
+	position: absolute;
+	bottom: 80px;
+    }
+}
+
+
+
+/* What to do for smaller screens */
+@media screen and (max-width:1024px)
+{ 
+    #wrapper {
+	width: 100%;
+    }
+
+    #nav {
+	display:none;
+    }
+
+
+    #contentwrapper {
+	width: 600px;
+	margin: 0 auto;
+    }
+
+    #content  {
+	position:static;
+	margin-top:100px;
+	float: none;
+	padding: none;
+	z-index: 100;
+    }
+
+    #header  {
+	top: 0;
+	position: fixed;
+	width: 600px;
+	margin: 0 auto;
+	display: block;
+	background-color: #3d3e3c;
+	margin-bottom: 1.5em;
+    }
+
+    #header span  {
+	padding-left: 10px;
+    }
+
+    #services  {
+	display: inline;
+	float: right;
+	vertical-align: baseline;
+    }
+}
+
+
+#content .centerme
+{
+    margin: 0 auto;
+}
+
+
+#nav ul { list-style:none; margin-top:50px; }
+#nav li ul { margin-top:2px; margin-bottom:2px; margin-left: 20px; display:none; }
+#nav li ul a { color: #c9cecc; } 
+
+#copyright { display:none; z-index: -1; position:fixed; color: #9e9e9e; bottom:50px; right:50px;}
+
+
+#content ul {
+    list-style: disc inside;
+    margin-left: 10px;
+    padding-left: 2em;
+    text-indent: -1em;
+    margin-bottom: 1em;
+}
+
+#content td
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 10px;
+}
+
+#content ul ul {
+    list-style: square inside;
+    margin-bottom: 0.5em;
+}
+
+#content hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
+
+#content .middle img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+#content .middle div
+{
+    display: table;
+    margin: 0 auto;
+    font-style:italic;
+    font-size: 80%;
+    padding-bottom: 1em;
+}
+
+
+#header
+{
+    padding-top: 1.90em;
+}
+
+#content h1 { color: rgb(186, 196, 165);  font-size:32px;  margin-bottom:0px; }
+#content h2 {  color: rgb(165, 181, 196);  font-size:24px;  margin-bottom:0px; margin-top: 20px; }
+#content h2 a { color: rgb(165, 181, 196); }
+#content h3 { font-size: 24px;  }
+#content img { display:block; max-width:600px; border-radius:10px; border:none;}
+#content p {margin: 0px 0px 10px; }
+#content p a { text-decoration:none; }
+#content blockquote p { font-size:11pt; background:#d8d8d8; border-radius:5px; padding:10px; box-shadow: 0 0 8px #aaa; }
+#content div + h2 { margin-top: 125px; }
+#content a { color: rgb(160, 172, 130);}
+
+#related {margin-top:80px; }
+
+.date { color:#bbb; float:right; margin-top:15px; }
+
+.archive { list-style:none !important; margin-top:10px;}
+.archive li { float:left; margin-bottom:5px; width:100%;}
+.archive a { min-width:200px; float:left; }
+.archive span { color:#909090; float:right; }
+
+.posts { list-style:none !important; margin-top:5px;}
+.posts li { margin-bottom:5px; }
+.posts span { color: #909090; }
+.posts a { color: #bbb; text-decoration:none !important; }
+
+.lighttable ul a { text-decoration:underline; }
+.lighttable h4 a { padding: 15px; background: #3d3e3c; display:inline-block; font-size:16px; float:right;}
+.lighttable h3,h4 { margin:15px 0; }
+
+#resume { font-weight:lighter; }
+#resume h2 { margin-bottom:0; line-height:1em; margin-top:10px; }
+#resume h3 { margin-bottom:30px; color:#909090; font-size:12pt; }
+#resume dt { font-size:18pt; color:#909090; margin-bottom:10px;}
+#resume dt span { color:#8080; } 
+#resume dd { margin-bottom: 20px; }
+#resume a { color:#caf; font-weight:normal; }
+
+.others { list-style:none !important; }
+
+.lost { float:left; display:inline; width:100%; text-align:center; margin-top: 300px; font-size:24px; }
+
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint { display: block; background-color: #333; border: none; border-radius: 0.75em; padding: 0.7em}
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+.bwfade img { /* Universal settings */
+    -webkit-transition:all .1s;
+    -moz-transition:all .1s;
+    -ms-transition:all .1s;
+    -o-transition:all .1s;
+    transition:all .1s;
+}
+
+.bwfade img:not(:hover) {
+    -webkit-filter:grayscale(100%);
+    -moz-filter:greyscale(100%);
+    -ms-filter:greyscale(100%);
+    -o-filter:greyscale(100%);
+    filter:grayscale(100%);
+}
+.bwfade img:hover {
+    -webkit-filter:greyscale(0%);
+    -moz-filter:greyscale(0%);
+    -ms-filter:greyscale(0%);
+    -o-filter:greyscale(0%);
+    filter:greyscale(0%);
+}
+
+
+#content
+{
+    height: 100%;
+}
+
+#content p
+{
+    text-align: justify;
+    font-size: 0.96em;
+}
+
+#services .icons img
+{
+    padding: none;
+    margin: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+div .header
+{
+    padding-bottom: 0.2em;
+}
+
+
+div.topbit
+{
+    width: 100%;
+}
+
+span.aut
+{
+    font-size: 0.9em;
+    color: #9e9e9e;
+}
+
+span.alltags
+{
+    float: right;
+}
+
+.alltags span {
+    font-weight: normal;
+    font-color: #c9cecc;
+    font-size: 0.75em;
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+article {
+    padding-bottom: 2em;
+}
+
+#comments {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+div#content .commentcount a {
+    font-size: 10px;
+}
+
+
+@media print {
+  pre.prettyprint { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+
+code {
+    color: #333;
+    background-color: #eea;
+    font-weight: bold;
+    border: none;
+    font-size: 105%;
+}
+
+
+// Inline highlight of things
+hl {
+    background: #ccf;
+    color: #333;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    
+}
+
+
+// Nerd stuff
+
+@import "animutils";
+
+@include keyframe(myfirst) {
+    0% {background:red;color: white;}
+    50% {background:yellow; color: black;}
+    100% {background:red;color: white;}
+}
+
+.nerdoxlink {
+    font-decoration: none;
+    font-weight: normal;
+    @include animation(myfirst,3s, infinite);
+}
+
+.nerdbox {
+    background: #a00;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.nerdcat {
+    float:left;
+    margin-right: 10px;
+}
+
+.boxout {
+    background: #eee;
+    color: #222;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+

@@ -1,3 +1,5 @@
 build
 node_modules
 *#
+contents/scss/*.css
+.sass-cache
