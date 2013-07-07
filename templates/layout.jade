@@ -21,29 +21,12 @@ html(lang='en')
         block title
           = locals.name
   
-
-    script(src='/css/jquery.min.js')
-    script(src='/bootstrap/js/bootstrap.js')
-
     link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css', type='text/css', media='screen, projection')
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css', type='text/css', media='screen, projection')
     link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
-
-    script(src='/google-code-prettify/run_prettify.js')
-
-    script(src='/scripts/disquscommentcount.js')
-    script(src='/scripts/misc.js')
-
-    script(src='/lightview/js/spinners/spinners.min.js')
-    script(src='/lightview/js/lightview/lightview.js')
-
-
     link(rel='stylesheet', href='/lightview/css/lightview/lightview.css')
- 
     link(rel='stylesheet', href='/css/screen-dark.css', type='text/css', media='screen, projection')
-
     link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-  
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700', rel='stylesheet', type='text/css')
 
     block game-stuff
@@ -60,3 +43,10 @@ html(lang='en')
               h2 Welcome to zombocom!
 
          
+  script(src='/lightview/js/spinners/spinners.min.js')
+  script(src='/lightview/js/lightview/lightview.js')
+  script(src='/css/jquery.min.js')
+  script(src='/bootstrap/js/bootstrap.js')
+  script(src='/scripts/misc.js')
+  script(src='/google-code-prettify/run_prettify.js')
+  script(src='/scripts/disquscommentcount.js')
