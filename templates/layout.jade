@@ -25,7 +25,7 @@ html(lang='en')
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css', type='text/css', media='screen, projection')
     link(rel='stylesheet', href='/css/reset.css', type='text/css', media='screen, projection')
     link(rel='stylesheet', href='/lightview/css/lightview/lightview.css')
-    link(rel='stylesheet', href='/css/screen-dark.css', type='text/css', media='screen, projection')
+    link(rel='stylesheet', href='/scss/main.css', type='text/css', media='screen, projection')
     link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700', rel='stylesheet', type='text/css')
 
@@ -42,10 +42,9 @@ html(lang='en')
             block content
               h2 Welcome to zombocom!
 
-         
+  script(src='/css/jquery.min.js')
   script(src='/lightview/js/spinners/spinners.min.js')
   script(src='/lightview/js/lightview/lightview.js')
-  script(src='/css/jquery.min.js')
   script(src='/bootstrap/js/bootstrap.js')
   script(src='/scripts/misc.js')
   script(src='/google-code-prettify/run_prettify.js')

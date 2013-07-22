@@ -359,3 +359,67 @@ code {
     border: none;
     font-size: 105%;
 }
+
+
+hl
+{
+    background: #ccf;
+    color: #333;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    
+}
+
+
+@keyframes myfirst
+{
+    0% {background:red;color: white;}
+    50% {background:yellow; color: black;}
+    100% {background:red;color: white;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0% {background:red;color: white;}
+    50% {background:yellow; color: black;}
+    100% {background:red;color: white;}
+}
+
+
+.nerdoxlink
+{
+    font-decoration: none;
+    font-weight: normal;
+
+    animation:myfirst 3s;
+    animation-iteration-count: infinite;
+
+    -webkit-animation:myfirst 3s; /* Safari and Chrome */
+    -webkit-animation-iteration-count: infinite;
+}
+
+.nerdbox
+{
+    background: #a00;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.nerdcat
+{
+    float:left;
+    margin-right: 10px;
+}
+
+.boxout
+{
+    background: #eee;
+    color: #222;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+
