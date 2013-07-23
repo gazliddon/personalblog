@@ -9,9 +9,10 @@ block content
   -   return item.date.getFullYear()
   - }).value()
   - var map = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-
+  - console.log(archive);
   section.archive
     ul
+
       each year in _.chain(archive).keys().reverse().value()
         li.year= year
         - var months = _.groupBy(archive[year], function(item) { return map[item.date.getMonth()] })
@@ -23,7 +24,7 @@ block content
                 thead
                   tr: Posts
                 tbody
-                  each article in articles
+                   each article in articles
                     tr
                       td
                         a(href=article.url)= article.title
