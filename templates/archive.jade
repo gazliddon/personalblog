@@ -5,11 +5,10 @@ block content
   include getarticles
 
   != page.html
-  - var archive = _.chain(articles).groupBy(function(item) {
+  - var archive = archiveArticles.groupBy(function(item) {
   -   return item.date.getFullYear()
   - }).value()
   - var map = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-  - console.log(archive);
   section.archive
     ul
 
